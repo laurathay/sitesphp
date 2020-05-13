@@ -136,23 +136,38 @@ echo strlen($jolie_chaine):
 
 echo strip_tags($jolie_chaine);
 
-echo strl(strip_tags($jolie_chaine)); //calculer la chaine via le tagg 
+echo strl(strip_tags($jolie_chaine)); //calculer la chaine via le tagg
 
 /*
         - le nombre de caractère dans ma chaine (la taille d'une chaine)
         echo strlen($jolie_chaine):
+
         - la fonction qui permet de remplacer le mot "dolor" dans la chaine par le mot "porte"
         echo strip_tags($jolie_chaine);
 
         - la fonction qui mélange les lettres d'une chaine
-        - inverse la chaine (la premiere lettre de la chaine se retrouve à la fin)
-        - retourner la place du mot "elit" dans une chaine
-        - effacer les tags HTML de ma chaine
-        - mettre la chaine en majuscule
-        - Récupérer seulement les 10 premiers caractères de ma chaine
-        - Récupérer seulement les 10 dernier caractères de ma chaine
-        - effacer les espaces en début et en fin de chaine
+        str_shuffle ($jolie_chaine);
 
+        - inverse la chaine (la premiere lettre de la chaine se retrouve à la fin)
+        strrev ( string $string )
+
+        - retourner la place du mot "elit" dans une chaine
+        strpos ()
+
+        - effacer les tags HTML de ma chaine
+        strip_tags()
+
+        - mettre la chaine en majuscule
+        strtoupper();
+
+        - Récupérer seulement les 10 premiers caractères de ma chaine
+        substr($texte, 10);
+
+        - Récupérer seulement les 10 dernier caractères de ma chaine
+         substr($chaine, -n, 10); n étant le numéro du dernier caractère dans la chaine
+
+        - effacer les espaces en début et en fin de chaine
+          trim()
  */
 
 
