@@ -61,6 +61,7 @@ echo "<br> <a href='img/ecran1.png' target='_blank'>Capture d'écran de la doc P
 echo "<hr>";
 
 $ma_Variable = "Je suis une chaîne de caractère";
+$ma_variable = "Valeur de ma variable";
 echo $ma_variable;
 // ici, sur l'écran, nous allons lire "Valeur de ma variable" et non "Je suis une chaîne de caractère"
 // CAR le nom d'une variable est sensible à la casse (les majuscules)
@@ -79,25 +80,28 @@ $adresse = $rue . $cp . $ville;
 
 
 $adresse_espace_1 = $rue . " " . $cp . " " . $ville;
+// echo "<h3>$adresse_espace_1</h3>";
 
 // mais aussi...
 $adresse_espace_2 = "$rue $cp $ville";
 $adresse_espace_3 = '$rue $cp $ville';
 
+echo "<h3>$adresse_espace_2</h3>";
+
 // regarder la différence !
 //
 // Dans le premier, on affiche la veleur de la variable
-// Dans le second, les variables ne sont pas évalué : ça reste des chaîne de caractères.
+// Dans le second, les variables ne sont pas évalué : ça reste des chaîne de caractères. Il cherche a l'interpréter
 
 echo "<hr>";
 
 $nom_resto = "PHEUPHEU";
 $nom_resto = "Bohème";
-// echo $nom_resto; // TESTER
+//echo $nom_resto; // TESTER on écrase la premiere valeur donc et affiche la derniere donc ici ca va afficher boheme
 
 $nom_autre_resto = " Chez Hennette ";
 $nom_autre_resto .= " Chez Nico ";
-// echo $nom_autre_resto; // TESTER
+// echo $nom_autre_resto; // TESTER comme le . concaterner ca va afficher Chez Hennette Chez Nico
 
 // on aurait pu écrire A LA PLACE
 // $nom_autre_resto = $nom_autre_resto . " Chez Nico ";
@@ -111,6 +115,14 @@ echo "<hr>";
 // une pour l'autreur Molière
 // et la seconde pour la pièce L'Avare et écrire à l'écran "L'Avare a été écrite par Molière"
 
+$moliere = "écrite par Molière";
+$avare = "L'Avare a été";
+
+$avare .= $moliere;
+echo "$avare";
+echo "<hr>";
+
+
 
 /***************** Chercher quelques fonctions sur les chaines de caractères ********************/
 
@@ -118,9 +130,20 @@ $jolie_chaine = "   Lorem ipsum dolor sit amet, consectetur <strong>adipiscing e
 
 echo "Chaine de départ : $jolie_chaine <br><br>";
 
+echo "<hr><h1>Fonctions sur les chaînes de caractères </h1>";
+
+echo strlen($jolie_chaine):
+
+echo strip_tags($jolie_chaine);
+
+echo strl(strip_tags($jolie_chaine)); //calculer la chaine via le tagg 
+
 /*
         - le nombre de caractère dans ma chaine (la taille d'une chaine)
+        echo strlen($jolie_chaine):
         - la fonction qui permet de remplacer le mot "dolor" dans la chaine par le mot "porte"
+        echo strip_tags($jolie_chaine);
+
         - la fonction qui mélange les lettres d'une chaine
         - inverse la chaine (la premiere lettre de la chaine se retrouve à la fin)
         - retourner la place du mot "elit" dans une chaine
