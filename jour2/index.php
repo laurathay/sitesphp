@@ -48,7 +48,7 @@
     <footer>
 
       <?php include "footer.php"; ?>
-
+      <?php include "navigation.php"; ?>
 
     </footer>
 
