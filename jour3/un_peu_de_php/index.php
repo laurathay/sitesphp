@@ -138,21 +138,30 @@ echo strip_tags($jolie_chaine);
 
 echo strl(strip_tags($jolie_chaine)); //calculer la chaine via le tagg
 
+$jolie_chaine = "ABCDEFGHIJKLMOPQRSTUVWXYZ";
+
+$_10_PREMIERS = substr($jolie_chaine, 0, 10); // pour avoir les dix premiers caractères
+$_10_DERNIERS = substr($jolie_chaine, -10, 10); // pour avoir les dix derniers caractères
+echo"<h1> $_10_PREMIERS </h1>";
+
+
+
 /*
         - le nombre de caractère dans ma chaine (la taille d'une chaine)
         echo strlen($jolie_chaine):
 
         - la fonction qui permet de remplacer le mot "dolor" dans la chaine par le mot "porte"
         echo strip_tags($jolie_chaine);
+        echo str_replace("", "", $string); real one
 
         - la fonction qui mélange les lettres d'une chaine
-        str_shuffle ($jolie_chaine);
+        str_shuffle ($jolie_chaine); OK
 
         - inverse la chaine (la premiere lettre de la chaine se retrouve à la fin)
-        strrev ( string $string )
+        strrev ( string $string ); OK
 
         - retourner la place du mot "elit" dans une chaine
-        strpos ()
+        strpos () OK
 
         - effacer les tags HTML de ma chaine
         strip_tags()
@@ -161,13 +170,13 @@ echo strl(strip_tags($jolie_chaine)); //calculer la chaine via le tagg
         strtoupper();
 
         - Récupérer seulement les 10 premiers caractères de ma chaine
-        substr($texte, 10);
+        substr($texte, 10); OK
 
         - Récupérer seulement les 10 dernier caractères de ma chaine
          substr($chaine, -n, 10); n étant le numéro du dernier caractère dans la chaine
 
         - effacer les espaces en début et en fin de chaine
-          trim()
+          trim() OK
  */
 
 
@@ -231,23 +240,33 @@ $a = 10;
 $a++;
 //echo $a;
 // exercice : ecrire cette commande d'une autre façon
+// $a = $a + 1;
 
+echo "<br/>";
 
 $a = 10;
-//echo $a++;
+echo $a++;
 //echo "<br>";
 //echo $a;
 
 $a = 10;
-//echo ++$a;
-//echo "<br>";
-//echo $a;
+echo $a++;
+
+
+echo "<br/>";
+echo $a;
+
+echo "<hr>";
+
+$a = 10;
+echo ++$a;
 
 /********** décrémenter ***********/
 $a = 10;
 $a--;
 //echo $a;
 // exercice : ecrire cette commande d'une autre façon
+
 
 $a = 10;
 //echo $a--;

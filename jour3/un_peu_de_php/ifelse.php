@@ -40,6 +40,8 @@ if ($a > $b) {
     echo 'NON : c\'est $b qui est supérieur (ou égale) à $a <br>';
 }
 
+exit;
+
 if ($b >= $c) {
     echo 'OUI : $b est supérieur ou égale à $c <br>';
 } else {
