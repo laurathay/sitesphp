@@ -40,7 +40,7 @@ if ($a > $b) {
     echo 'NON : c\'est $b qui est supérieur (ou égale) à $a <br>';
 }
 
-exit;
+//exit;
 
 if ($b >= $c) {
     echo 'OUI : $b est supérieur ou égale à $c <br>';
@@ -48,11 +48,36 @@ if ($b >= $c) {
     echo 'NON : $b est strictement inférieur à $c <br> ';
 }
 
+//exit; //pour arreter tout ce qui a après
+
 // exercice :
 //  - vérifier que a est inférieur à b
+if ($a < $b){
+  echo "oui";
+} else{
+  echo "non";
+}
 //  - vérifier que a est inférieur ou égale à b
+if ($a <= $b){
+  echo "oui";
+} else{
+  echo "non";
+}
 //  - vérifier que a est égale à d
+if ($a == $d){
+  echo "oui";
+} else{
+  echo "non";
+}
 //  - vérifier que a est différent de c
+if ($a != $d){
+  echo "oui";
+} else{
+  echo "non";
+}
+
+
+
 
 
 echo "<h3>Comparaison par valeur VS comparaison par valeur et type</h3>";
@@ -90,26 +115,65 @@ if ($a > $b || $a < $c ) {
 }
 
 
+
+
+
 // if else elseif
 
-$a = 5;
+$a = 40;
 
 if($a == 5) {
     echo 'REP 1 : $a est egale à 5 <br>';
 } elseif( $a > 9) {
-    echo 'REP 2 : $a est supérieur à 9 <br>';
+    echo 'REP 2 : $a est supérieur à 9 <br>'; // quand une condition est validé on sort du if
+
+} elseif ($a > 10){
+    echo 'REP 2bis: $a est supérieur à 10 <br>'; // cette ligne ne sert a rien donc
 } else {
     echo 'REP 3 : $a n\'est pas supérieur à 9 et n\'est pas égale à 5 <br>';
 }
 
 
+
+
+
 echo "<h2>Forme contractée (opérateur ternaire)</h2>";
 $a = 5;
+
 // forme contractée
 echo ($a >= 5) ? '$a est suppérieur ou égale à 5 <br>' : '$a strictement inférieur à 5 <br>';
 
-$new = $a == 5 ? 'OUI' : 'NON';
+// forme longue
+if ($a>= 5)
+  echo '$a est suppérieur ou égale à 5 <br>';
+} else if ($a<= 5){
+  echo '$a strictement inférieur à 5 <br>';
+}
+
+
+
+
+
+
+$new = ($a == 5) ? 'OUI' : 'NON';
 echo $new;
+
+// autre facon de l'écrire
+$($a == 5){
+  $new = "OUI";
+} else {
+  $new = "NON";
+}
+
+echo $new;
+
+
+
+
+
+
+
+
 
 
 echo "<h2>Fonctions pour savoir si une variable est définie</h2>";
@@ -119,12 +183,12 @@ echo "<h2>Fonctions pour savoir si une variable est définie</h2>";
 
 $var = 0;
 // Evalué à vrai car $var est vide
-if (empty($var)) {
+if (empty($var)) { // si ma variable est vide ca ecrit le echo
     echo 'A - $var vaut soit 0, vide, ou pas définie du tout <br/>';
 }
 
 // Evalué à vrai car $var est défini
-if (isset($var)) {
+if (isset($var)) { // est ce que ma variable var est defini si oui echo
     echo 'B - $var est définie même si elle est vide <br/>';
 }
 
@@ -155,6 +219,12 @@ if(  TRUE) { // "si pas vrai"
 } else {
     echo "FALSE <br>";
 }
+
+echo "<hr>";
+var_dump(!empty($var_3));  // var_dump nous aide pour avoir des infos plus précise sur les variables
+
+echo "<hr>";
+var_dump(empty ($var_3));
 
 // Tester en affectant des valeurs différente à la variable & en commentant la ligne
 
@@ -189,21 +259,19 @@ switch ($fruit) {
 
 $fruit = "amande";
 
-switch ($fruit) {
-    case 'kiwi' :
-    case 'banane' :
+if ($fruit == "amande") {
+    elseif ($ftuit == 'kiwi') :
+    elseif ($fruit =='banane') :
         echo 'J\'aime les fruits exotiques <br>';
-        break;  // obligatoire pour sortir du switch
-    case 'pomme' :
-    case 'poire' :
+    elseif ($fruit == 'poire') {
+      // code...
+    } elseif($fruit =='pomme') :
+    elseif($fruit == 'poire') :
         echo 'J\'aime les fruits classiques <br>';
-        break;
-    case 'amande' :
+    elseif ($fruit == 'amande') {
         echo 'J\'aime les graines <br>';
-        break;
-    default :  // cas par défaut : aucun des précédents cas n'a été validé.
+    else :  // cas par défaut : aucun des précédents cas n'a été validé.
         echo 'J\'ai l\'impression que je n\'aime pas trop les fruits<br>';
-        break;
 }
 
 // EXO : réécrire le dernier switch avec des if / else pour avoir le même résultat
