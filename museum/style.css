@@ -100,3 +100,17 @@ h2{
       color: #232322;
   transform: translate(-50%, -50%);
 }
+
+
+
+
+/* page artistes */
+
+h2{
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
+
+.container3 img{
+  width: 100%;
+}
