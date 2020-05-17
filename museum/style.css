@@ -1,0 +1,102 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+header img{
+  width: 20%;
+}
+
+
+@font-face {
+ font-family: "Raleway";
+ src: url("Raleway-SemiBold.ttf") format("ttf");
+}
+
+h1{
+  font-size: inherit;
+  font-family: 'Raleway', serif;
+  text-align: center;
+  line-height: 1.5em;
+  position: absolute;
+  opacity: 0.5;
+  top: 76%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.container img{
+  width: 112%;
+}
+
+.menu-nav{
+  margin-left: 9em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+.menu-nav a {
+  display:inline-block;
+  text-decoration: none;
+  padding-left: 2em;
+  text-align: justify;
+  font-family: 'Cardo', serif;
+  color: #586F7C;
+}
+
+
+#intro_color{
+  margin-left: 2em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+
+#intro_color p {
+  text-align: justify;
+  font-size: x-large;
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+      line-height: 1.5em;
+      position: absolute;
+      opacity: 0.5;
+      top: 85%;
+      left: 35%;
+      color: #eca109;
+  transform: translate(-50%, -50%);
+}
+
+h2{
+  text-align: center;
+}
+
+.container2 img{
+  width: 100%;
+}
+
+#intro_arty p {
+  text-align: justify;
+  font-size: x-large;
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+      line-height: 1.5em;
+      position: absolute;
+      opacity: 0.5;
+      top: 331%;
+      left: 48%;
+      color: #232322;
+  transform: translate(-50%, -50%);
+}
