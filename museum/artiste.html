@@ -11,45 +11,44 @@
   <body>
 
     <header>
-    <!-- logo -->
-      <img src="logo.png" alt="logo">
+      <!-- nav et bar de recherche avec bootstrap -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">  <img src="images/logo.png" alt="logo"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- nav et bar de recherche avec bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="artistes.html"> Artistes </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Type
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#"> Photographe </a>
+                <a class="dropdown-item" href="#"> Peintre </a>
+                <a class="dropdown-item" href="#"> Graveur </a>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="artiste.html"> LeGrosse </a> <!-- pour plus tard peut etre rajouter un truc -->
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">  <!-- pour plus tard peut etre rajouter un truc -->  </a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn alert-warning my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
 
     </header>
 
@@ -57,6 +56,43 @@
 
     <!-- biographie complete de l'artiste
         la photo et le titre d'une ou plusieurs de ses oeuvres -->
+
+        <div class=block>
+            <h4> Pipiloti <br>& Danke </h4>
+
+            <section class="portfolio-experiment">
+            <a>
+              <span class="text"> Biographie </span>
+              <span class="line -bottom"></span>
+            </a>
+          </section>
+          <section class="portfolio-experiment">
+            <a>
+              <span class="text"> Oeuvres </span>
+              <span class="line -bottom"></span>
+            </a>
+          </section>
+          <section class="portfolio-experiment">
+            <a>
+              <span class="text"> Contact </span>
+              <span class="line -bottom"></span>
+            </a>
+          </section>
+
+                      <article>
+                              <img class="dimsum bounce" src="images/foodyumcha.jpg" alt="Oeuvre 1">
+                      </article>
+                      <article>
+                              <img class="desert bounce" src="images/fooddesert.jpg" alt="Oeuvre 2">
+                      </article>
+                      <article>
+                              <img class="situation bounce" data-anim src="images/foodsituation.jpg" alt="Oeuvre 3">
+                      </article>
+                      <article>
+                              <img class="fooddrinks bounce" data-anim src="images/fooddrinks.jpg" alt="Oeuvre 4">
+                      </article>
+
+        </div>
 
     </main>
     <footer>

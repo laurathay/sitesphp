@@ -15,6 +15,67 @@
 
     <header>
 
+      <!-- nav et bar de recherche avec bootstrap -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">  <img src="images/logo.png" alt="logo"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="artistes.html"> Artistes </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Type
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#"> Photographe </a>
+                <a class="dropdown-item" href="#"> Peintre </a>
+                <a class="dropdown-item" href="#"> Graveur </a>
+
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="artiste.html"> LeGrosse </a> <!-- pour plus tard peut etre rajouter un truc -->
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">  <!-- pour plus tard peut etre rajouter un truc -->  </a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn alert-warning my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+
+
+<div class="image-de-fond">
+  <img src="images/artistes-fond.jpg" alt="fond d'ecran">
+
+
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Photographe, peintre, graveur ..." aria-label="Search" style ="width:770px; margin-left:98px;">
+
+      <div class="custom-select" style="width:142px;">
+          <select>
+            <option value="0"> Photographe</option>
+            <option value="1"> Peintre </option>
+            <option value="2"> Graveur </option>
+          </select>
+      </div>
+
+      <button class="btn btn-warning my-2 my-sm-0" type="submit" style="margin-left:10px;"> Rechercher </button>
+    </form>
+  </nav>
+</div>
     <!-- mettre logo et nav et bar de recherche avec bootstrap -->
 
     </header>
@@ -24,27 +85,26 @@
     <!-- moteur de recherche avec choix du type d'artiste (photographe, peintre et graveur ..)
         1 ligne de résultat = une photo de l'artiste et résumé de la biographie de l'artiste -->
 
-        <nav class="navbar navbar-light bg-light">
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Photographe, peintre, graveur ..." aria-label="Search" style ="width:806px; margin-left:178px;">
-            <button class="btn btn-warning my-2 my-sm-0" type="submit"> Rechercher </button>
-          </form>
-        </nav>
-
 
       <h2>
         "It is the harmony of the diverse parts, their symmetry, their happy balance; in a word it is all that introduces order, all that gives unity, that permits us to see clearly and to comprehend at once both the ensemble and the details."
       </h2>
 
+      <h3>
+        résultat :
+      </h3>
+
       <div class="container3">
 
             <img src="images/artistes.jpg" alt="Un artiste parmi d'autres">
-            <h3>
-              résultat :
-            </h3>
-            <p>
-              résumé bio artiste : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+
+            <div class="intro_arty">
+
+              <p>
+                résumé bio artiste : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+              </p>
+
+            </div>
 
       </div>
 
