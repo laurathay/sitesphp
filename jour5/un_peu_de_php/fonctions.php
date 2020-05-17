@@ -388,7 +388,7 @@ addBr($nomPrenom);
 # 4 - Créer une fonction validerMotDePasse(), elle prend une chaine en argument et retourne VRAI si cette chaine
 #     valide les conditions suivante :
 #       + elle fait au moins 10 caractères (non vide, sans compter les espaces)
-#       + il y a au moins le caractère @ 
+#       + il y a au moins le caractère @
 #
 
 
@@ -398,10 +398,11 @@ addBr($nomPrenom);
 #       ESPAGNE ===> MADRID
 #       TOUT AUTRE PAYS ===> OOOPS ! JE NE SAIS PAS
 #
+# echo capital('France'); ====> PARIS
 
 
 # 6 - Créer une fonction aujourdhui() qui affiche la date du jour 15/05/2020
-#
+# si on galère dessus il y a une fonction pour ca  
 
 
 
