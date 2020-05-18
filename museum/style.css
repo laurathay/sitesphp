@@ -316,3 +316,23 @@ article {
     );
     margin: auto auto 50px auto;
 }
+
+footer ul{
+  display: contents;
+  list-style-type: none;
+  margin-right: 2em;
+}
+
+
+ul li a{
+  color: pink;
+  margin-right: 1em;
+}
+
+.fas:nth-child(n+1){
+  margin-right: 1em;
+}
+
+footer ul li:nth-child(n+1){
+  margin-right: 2em;
+}
