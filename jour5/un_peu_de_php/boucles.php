@@ -103,7 +103,7 @@ tableDeMultiplication(3);
 echo "<hr>";
 
 
-$i = 1; // valeur de départ de la boucle 
+$i = 1; // valeur de départ de la boucle
 while ($i <= 10){
   tableDeMultiplication($i);
   echo "<hr>";
@@ -114,7 +114,26 @@ while ($i <= 10){
 
 # EXO 2 : Ecrire un <select> qui nous permettre de choisir une annéé entre 1900 et aujourd'hui
 
+$ma_date = 1900;
 
+echo "<select>";
+  while($ma_date <= 2020) {
+
+    echo "<option> $ma_date </option>";
+    $ma_date++;
+}
+echo"</select>";
+exit;
+
+//alternative
+
+// function choixAnnee($i) {
+//   $chaineHtml = "";
+//   while ($a <= date("Y")) {
+//     $chaineHtml .= "<option value=\"$si\">$i</option>";
+//     $i++;
+//   }
+// }
 
 ////////////////////////// Boucle do while :
 h2("La boucle do ..... while");
@@ -129,6 +148,7 @@ do {
 // la condition est FAUSSE mais la boucle s'est pourtant exécuter une fois.
 // Attention à ne pas oublier le ";" à la fin du do...while
 
+exit;
 
 ////////////////////////// Boucle for :
 h2("La boucle for");
@@ -148,7 +168,7 @@ for($j = 0; $j < 16; $j++) {
 
 // pour que ce soit plus facilement lisible, je prefère écrire
 for($j = 0; $j <= 15; $j++) {
-    // ...
+//
 }
 
 hr();
@@ -159,9 +179,40 @@ hr();
 
 # Exercices :
 # 1- faire une boucle for qui affiche les valeurs 0 à 9 sur la même ligne séparé par un " - ";
+$a =33;
+
+addBrX($a, "yellow") ;
+
+
+$html = "";
+for($a = 0; $a <= 9; $a++) {
+    $html .= "$a -";
+}
+
+addBrX($html); // a ce niveau la a =10 et c'est la derniere valeur
 
 
 # 2- faire la même chose en mettant les valeurs dans une <table>
+echo "<table>";
+echo "<tr>";
+
+  for ($ma_table = 0; $ma_table <= 9; $ma_table++){
+    echo "<td> $ma_table </td>";
+  }
+
+echo"</tr>";
+echo"</table>";
+
+
+// on veut ca
+// <tr>
+// <td> 0 </td>
+// <td> 1 </td>
+// <td> 2 </td>
+// <td> ... </td>
+// <td> 9 </td>
+// </tr>
+// </table>
 
 
 echo '<table border="1">';
@@ -174,7 +225,61 @@ echo '</table>';
 
 
 # 3-  Faire un tableau de 5 lignes sur 5 colonnes :
+//imbriquer 2 boucles for
 
+echo '<table border="1">';
+for($a = 0; $a < 10; $a++) {
+  echo "<tr>$a</tr>";{
+    for($i = 0; $i < 10; $i++) {
+        echo "<td>$i</td>";
+    }
+  }
+
+echo '</table>';
+
+
+<table>
+  <tr>
+      <td> l1 c1 </td>
+      <td> l1 c2 </td>
+      <td> l1 c3 </td>
+      <td> l1 c4 </td>
+      <td> l1 c5 </td>
+
+  </tr>
+  <tr>
+      <td> l2 c1 </td>
+      <td> l2 c2 </td>
+      <td> l2 c3 </td>
+      <td> l2 c4 </td>
+      <td> l2 c5 </td>
+
+  </tr>
+  <tr>
+      <td> l3 c1 </td>
+      <td> l3 c2 </td>
+      <td> l3 c3 </td>
+      <td> l3 c4 </td>
+      <td> l3 c5 </td>
+
+  </tr>
+  <tr>
+        <td> l4 c1 </td>
+        <td> l4 c2 </td>
+        <td> l4 c3 </td>
+        <td> l4 c4 </td>
+        <td> l4 c5 </td>
+
+    </tr>
+    <tr>
+          <td> l5 c1 </td>
+          <td> l5 c2 </td>
+          <td> l5 c3 </td>
+          <td> l5 c4 </td>
+          <td> l5 c5 </td>
+
+      </tr>
+</table>
 
 ?>
 
