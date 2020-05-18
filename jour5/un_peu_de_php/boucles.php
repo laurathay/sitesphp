@@ -64,9 +64,9 @@ h2("La boucle while");
 $i = 0; // valeur de départ de la boucle
 
 
-while ($i <= 5) {  // Tant que $i < 30 alors fait le code suivant.
+while ($i <= 5) {  // Tant que $i < 5 alors fait le code suivant.
     echo $i . '---';
-    $i++; ///// SUPER IMPORTANT ///
+    $i++; ///// SUPER IMPORTANT /// sinon continue a tourner a 0 a l'infini
     // l'incrémentation est obligatoire pour changer la valeur de $i
     // jusqu'à ce que la condition while devienne fausse (cela évite une boucle infinie)
 }
@@ -75,6 +75,41 @@ hr();
 
 # EXO 1 : Ecrivez une fonction tableDeMultiplication() qui prend en paramètre un chiffre et écrit la
 # table de multiplication (jusqu'à 10)
+
+// $i = 5;
+//
+// fontion tableDeMultiplication(){
+//   while (isset(is_int($i))){
+//     echo $i . '---';
+//     $i*5;
+//   }
+// }
+//
+// hr()
+// tableDeMultiplication(5);
+
+
+funtion tableDeMultiplication($Tablede){
+  echo "<h2> Table de  $i </h2>";
+  $i = 1;                                      // on instancie dans la fonction
+  while ($i <= 10) {
+    echo "$Tablede x $i = " . $i * $Tablede;
+    echo "<br>";
+    $i++;
+}
+}
+
+tableDeMultiplication(3);
+echo "<hr>";
+
+
+$i = 1; // valeur de départ de la boucle 
+while ($i <= 10){
+  tableDeMultiplication($i);
+  echo "<hr>";
+  $i++;
+}
+
 
 
 # EXO 2 : Ecrire un <select> qui nous permettre de choisir une annéé entre 1900 et aujourd'hui

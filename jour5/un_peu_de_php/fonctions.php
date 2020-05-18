@@ -192,15 +192,15 @@ echo add(20, 65); // autre possibilité de l'écrire
 
 
 // exo de division
-funtion divide($val1, $val2){
-  return $val1 / $val2;
-}
-
-$resultat = divide(150, 10); // j'ai oublié echo
-addBr($resultat);
-
-// autre facon de l'écrire Correction
-addBr (divide(150,10));
+// funtion divide($val1, $val2){
+//   return $val1 / $val2;
+// }
+//
+// $resultat = divide(150, 10); // j'ai oublié echo
+// addBr($resultat);
+//
+// // autre facon de l'écrire Correction
+// addBr (divide(150,10));
 
 
 
@@ -226,39 +226,39 @@ addBr (divide(150,10));
 # c'est à dire qu'elle ne fait pas de fautes de grammaires !
 #
 # (perso, j'ai besoin de ce genre de fonction !)
-#
-
-
-fontion nombre_de_photo($nombre_de_photo(x)){
-  if $nombre_de_photo(x) == 1{
-    echo "Hier, vous avez pris 1 photo";
-  } elseif ($nombre_de_photo(x) > 1) {
-    echo "Hier, vous avez pris $nombre_de_photo photos";
-  } else $nombre_de_photo(x) == 0{
-    echo "Hier, vous n'avez pas pris de photo.";
-  }
-}
-
-//Correction
-function nombre_de_photo($nombre = 0){
-  //hier, vous avez pris 5 photo.
-
-  if(is_int($nombre) && $nombre >= 0){  //pour s'assurer que le nombre donner doit etre un nombre entier et supérieur a 0
-
-    if ($nombre <=1){
-      $chaine = "hier, vous avez pris $nombre photo.";
-    } else {
-      $chaine = "hier, vous avez pris $nombre photos.";
-    }
-
-    echo $chaine;
-  } else {
-    echo "Je ne vous comprends pas";
-  }
-
-}
-
-nombre_de_photo("blabla");
+// #
+//
+//
+// fontion nombre_de_photo($nombre_de_photo(x)){
+//   if $nombre_de_photo(x) == 1{
+//     echo "Hier, vous avez pris 1 photo";
+//   } elseif ($nombre_de_photo(x) > 1) {
+//     echo "Hier, vous avez pris $nombre_de_photo photos";
+//   } else $nombre_de_photo(x) == 0{
+//     echo "Hier, vous n'avez pas pris de photo.";
+//   }
+// }
+//
+// //Correction
+// function nombre_de_photo($nombre = 0){
+//   //hier, vous avez pris 5 photo.
+//
+//   if(is_int($nombre) && $nombre >= 0){  //pour s'assurer que le nombre donner doit etre un nombre entier et supérieur a 0
+//
+//     if ($nombre <=1){
+//       $chaine = "hier, vous avez pris $nombre photo.";
+//     } else {
+//       $chaine = "hier, vous avez pris $nombre photos.";
+//     }
+//
+//     echo $chaine;
+//   } else {
+//     echo "Je ne vous comprends pas";
+//   }
+//
+// }
+//
+// nombre_de_photo("blabla");
 
 
 
@@ -379,17 +379,54 @@ addBr($nomPrenom);
 #     des deux.
 #########################
 
+function quiEstLePlusGrand($int1, $int2){
+  if(is_int($int1)=="integer" && is_int($int2)=="integer"){
+    if($int1 > $int2){
+      return $int1;
+    } else{
+      return $int2;
+    }
+  }
+  else{
+    echo "ces arguments ne sont pas des entiers";
+  }
+}
+
+quiEstLePlusGrand(10,54);
+echo "<br>";
 
 # 3 - Créer une fonction quiEstLePlusPetit(), elle prend 4 arguments de type int et devra retourner le plus petit
 #     des 4.
 #########################
 
+function quiEstLePlusPetit($int1, $int2, $int3, $int4){
+  if(is_int($int1) && is_int($int2) && is_int($int3) && is_int($int4)){
+    return min($int1, $int2, $int3 ,$int4);
+  } else{
+    echo "Ces arguments ne sont pas des entiers";
+  }
+}
+
+quiEstLePlusPetit(6, 89, 28, 99);
+echo "<br>";
+echo quiEstLePlusPetit(6, 89, 28, 99);
 
 # 4 - Créer une fonction validerMotDePasse(), elle prend une chaine en argument et retourne VRAI si cette chaine
 #     valide les conditions suivante :
 #       + elle fait au moins 10 caractères (non vide, sans compter les espaces)
 #       + il y a au moins le caractère @
 #
+
+function validerMotDePasse($chaineDeCaracteres){
+  if (issets(strlen($chaineDeCaracteres)) >= 10 && strstr($chaineDeCaracteres, "@"){
+    return TRUE;
+  } else {
+    return "Votre mot de passe n'est pas valide";
+  }
+}
+
+echo validerMotDePasse("@ouiouioui");
+echo "<br>";
 
 
 # 5 - Créer une fonction capital() qui prend en argument une chaine et qui retourne le nom de la capitale
@@ -400,12 +437,41 @@ addBr($nomPrenom);
 #
 # echo capital('France'); ====> PARIS
 
+function capital (string $pays) {
+switch ($pays) {
+  case ‘France’ :
+    echo ‘Paris<br>’;
+    break;
+  case ‘Italie’ :
+    echo ‘Rome<br>’;
+    break;
+  case ‘Espagne’ :
+    echo ‘Madrid<br>’;
+    break;
+  default :
+    echo ‘OOOPS ! JE NE SAIS PAS<br>’;
+    break;
+  }
+}
+
+capital(France);
+
+function capital (string &pays){
+  if
+  else
+}
+
 
 # 6 - Créer une fonction aujourdhui() qui affiche la date du jour 15/05/2020
-# si on galère dessus il y a une fonction pour ca  
+# si on galère dessus il y a une fonction pour ca
 
+function aujourdhui(){
+  $today = date ("d/ m/ Y");
+  echo "Nous sommes le ". $today;
+}
 
-
+echo aujourdhui();
+echo "<br>"
 
 ?>
 
