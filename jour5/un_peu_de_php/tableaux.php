@@ -147,7 +147,7 @@ $contact = array(         // ou on aurait pu écrire les crocher carrer
     "telephone" => "0123456789",
     "ville" => "Paris",
     "code postal" => "75020",
-    "hobbies" => "crochet",
+    "hobbies" => "se currer le nez",
 );
 
 var_dump($contact);
@@ -175,15 +175,45 @@ echo "</ul>";
 
 
 
+function tableDeMultiplication($NbrCol, $NbrLigne) {
+  $NbrCol = "10";
+  $NbrLigne = "10";
 
+  echo '<table border="1" width="400">';
+  // 1ere ligne (ligne 0)
+     echo '<tr>';
+     echo '<td bgcolor="pink"> i X j </td>';
+     for ($j=1; $j<=$NbrCol; $j++) {
+        echo '<td bgcolor="pink">'.$j.'</td>';
+     }
+     echo '</tr>';
 
+  for ($i=1; $i<=$NbrLigne; $i++) {
+     echo '<tr>';
+     for ($j=1; $j<=$NbrCol; $j++) {
+         // 1ere colonne (colonne 0)
+        if ($j==1) {
+           echo '<td bgcolor="pink">'.$i.'</td>';
+        }
+         // colonnes suivantes
+           if ($i==$j) {
+              echo '<td bgcolor="yellow">';
+           } else {
+              echo '<td>';
+           }
+         // ------------------------------------------
+         // AFFICHAGE ligne $i, colonne $j
+        echo $i*$j;
+        echo '</td>';
+     }
+     echo '</tr>';
+     $j=1;
+  }
+  echo '</table>';
+}
+tableDeMultiplication(10,10);
 
-
-
-
-
-
-
+exit;
 
 
 
@@ -235,7 +265,7 @@ echo '<hr>';
 # afficher chaque auteur sous la forme : nom prenom ( annee de naissance - annee de mort)
 #
 
-# creer un tableau de multiplication de de 1 à 10 dans un tableau de 10x10 avec les entetes de chaque coté 
+# creer un tableau de multiplication de de 1 à 10 dans un tableau de 10x10 avec les entetes de chaque coté
 
 ?>
 
