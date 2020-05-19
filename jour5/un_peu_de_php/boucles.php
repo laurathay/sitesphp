@@ -89,14 +89,15 @@ hr();
 // tableDeMultiplication(5);
 
 
-funtion tableDeMultiplication($Tablede){
-  echo "<h2> Table de  $i </h2>";
-  $i = 1;                                      // on instancie dans la fonction
-  while ($i <= 10) {
-    echo "$Tablede x $i = " . $i * $Tablede;
-    echo "<br>";
-    $i++;
-}
+function tableDeMultiplication($Tablede){
+    echo "<h2> Table de  $i </h2>";
+    $i = 1;                                      // on instancie dans la fonction
+
+    while ($i <= 10) {
+      echo "$Tablede x $i = " . $i * $Tablede;
+      echo "<br>";
+      $i++;
+  }
 }
 
 tableDeMultiplication(3);
@@ -148,7 +149,6 @@ do {
 // la condition est FAUSSE mais la boucle s'est pourtant exécuter une fois.
 // Attention à ne pas oublier le ";" à la fin du do...while
 
-exit;
 
 ////////////////////////// Boucle for :
 h2("La boucle for");
@@ -203,6 +203,7 @@ echo "<tr>";
 echo"</tr>";
 echo"</table>";
 
+hr();
 
 // on veut ca
 // <tr>
@@ -223,63 +224,76 @@ for($i = 0; $i < 10; $i++) {
 echo '</tr>';
 echo '</table>';
 
+hr();
 
 # 3-  Faire un tableau de 5 lignes sur 5 colonnes :
 //imbriquer 2 boucles for
 
-echo '<table border="1">';
-for($a = 0; $a < 10; $a++) {
-  echo "<tr>$a</tr>";{
-    for($i = 0; $i < 10; $i++) {
-        echo "<td>$i</td>";
+echo '<table border="1">'.PHP_EOL;
+for($l = 0; $l < 10; $l++)
+  {
+    echo "<tr>";{
+    for($c = 0; $c < 10; $c++)
+    {
+        echo "<td>$l col $c</td>".PHP_EOL;
     }
+    echo "</tr>";
+  }
+
+echo '</table>';
+}
+
+hr();
+
+//12 lignes et 3 colonnes maintenant
+
+
+
+
+
+function creerTableau ($nombreLigne, $nombreColonne){
+  // retourner une chaine HTML
+  $strHTML = "";
+
+if($nombreLigne > 0 && $nombreColonne > 0){
+  $strHTML .= "<table>";
+
+  for($l=1; $l<=$nombreLigne; $l++){
+    $strHTML .= "<tr>";
+    for($c=1; $x<=$nombreColonne; $c++){
+      $strHTML .= "<td>Ligne $1 Col $c <td>";
+    }
+    $strHTML .= "</tr";
+  }
+  $strHTML .= "</table";
+
+  return $strHTML;
+}
+
+
+echo creerTableau(12,3);
+
+hr();
+
+
+
+
+
+echo '<table border="1">'.PHP_EOL;
+for($l = 0; $l < 12; $l++)
+  {
+    echo "<tr>";{
+    for($c = 0; $c < 3; $c++)
+    {
+        echo "<td>$l col $c</td>".PHP_EOL;
+    }
+    echo "</tr>";
   }
 
 echo '</table>';
 
-
-<table>
-  <tr>
-      <td> l1 c1 </td>
-      <td> l1 c2 </td>
-      <td> l1 c3 </td>
-      <td> l1 c4 </td>
-      <td> l1 c5 </td>
-
-  </tr>
-  <tr>
-      <td> l2 c1 </td>
-      <td> l2 c2 </td>
-      <td> l2 c3 </td>
-      <td> l2 c4 </td>
-      <td> l2 c5 </td>
-
-  </tr>
-  <tr>
-      <td> l3 c1 </td>
-      <td> l3 c2 </td>
-      <td> l3 c3 </td>
-      <td> l3 c4 </td>
-      <td> l3 c5 </td>
-
-  </tr>
-  <tr>
-        <td> l4 c1 </td>
-        <td> l4 c2 </td>
-        <td> l4 c3 </td>
-        <td> l4 c4 </td>
-        <td> l4 c5 </td>
-
-    </tr>
-    <tr>
-          <td> l5 c1 </td>
-          <td> l5 c2 </td>
-          <td> l5 c3 </td>
-          <td> l5 c4 </td>
-          <td> l5 c5 </td>
-
-      </tr>
-</table>
+return $strHTML;
+}
 
 ?>
 
@@ -288,9 +302,9 @@ echo '</table>';
 
 
 
-<hr>
-<?php
-include("nav.php");
-?>
-</body>
+  <hr>
+  <?php
+  include("nav.php");
+  ?>
+  </body>
 </html>
