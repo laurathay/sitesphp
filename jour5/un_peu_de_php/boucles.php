@@ -90,9 +90,8 @@ hr();
 
 
 function tableDeMultiplication($Tablede){
-    echo "<h2> Table de  $i </h2>";
-    $i = 1;                                      // on instancie dans la fonction
-
+    echo "<h2> Table de  $Tablede </h2>";
+    $i = 1;
     while ($i <= 10) {
       echo "$Tablede x $i = " . $i * $Tablede;
       echo "<br>";
@@ -104,11 +103,11 @@ tableDeMultiplication(3);
 echo "<hr>";
 
 
-$i = 1; // valeur de départ de la boucle
-while ($i <= 10){
-  tableDeMultiplication($i);
+$a = 1; // valeur de départ de la boucle
+while ($a <= 10){
+  tableDeMultiplication($a);
   echo "<hr>";
-  $i++;
+  $a++;
 }
 
 
@@ -255,19 +254,21 @@ function creerTableau ($nombreLigne, $nombreColonne){
   // retourner une chaine HTML
   $strHTML = "";
 
-if($nombreLigne > 0 && $nombreColonne > 0){
-  $strHTML .= "<table>";
+  if($nombreLigne > 0 && $nombreColonne > 0){
+    $strHTML .= "<table>";
 
-  for($l=1; $l<=$nombreLigne; $l++){
-    $strHTML .= "<tr>";
-    for($c=1; $x<=$nombreColonne; $c++){
-      $strHTML .= "<td>Ligne $1 Col $c <td>";
+    for($l=1; $l<=$nombreLigne; $l++){
+      $strHTML .= "<tr>";
+      for($c=1; $x<=$nombreColonne; $c++){
+        $strHTML .= "<td>Ligne $1 Col $c <td>";
+      }
+      $strHTML .= "</tr";
     }
-    $strHTML .= "</tr";
-  }
-  $strHTML .= "</table";
+    $strHTML .= "</table";
 
+  }
   return $strHTML;
+
 }
 
 
@@ -276,24 +277,23 @@ echo creerTableau(12,3);
 hr();
 
 
+function tableau(){
+    echo '<table border="1">'.PHP_EOL;
+    for($l = 0; $l < 12; $l++)
+      {
+        echo "<tr>";
+        for($c = 0; $c < 3; $c++)
+        {
+            echo "<td>$l col $c</td>".PHP_EOL;
+        }
+        echo "</tr>";
+      }
 
+    echo '</table>';
 
-
-echo '<table border="1">'.PHP_EOL;
-for($l = 0; $l < 12; $l++)
-  {
-    echo "<tr>";{
-    for($c = 0; $c < 3; $c++)
-    {
-        echo "<td>$l col $c</td>".PHP_EOL;
-    }
-    echo "</tr>";
+    return $strHTML;
   }
 
-echo '</table>';
-
-return $strHTML;
-}
 
 ?>
 

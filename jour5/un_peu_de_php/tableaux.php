@@ -110,7 +110,6 @@ addBr("Le nom de notre auteur est $auteur[nom]");
 
 
 
-
 //-------------------------------------------------------
 // La boucle foreach
 //-------------------------------------------------------
@@ -131,17 +130,63 @@ foreach($tableau as $valeur) {
 echo "<hr>";
 
 //-----
+echo "<ul>";
 foreach($tableau as $indice => $valeur) {  // quand il y a 2 variables séparées par une flèche, la 1ere parcourt la colonne des indices et la seconde la colonne des valeurs
+    echo "<li>";
     echo $indice . ' correspond à ' . $valeur . '<br>';  // on affiche successivement les indices et les valeurs de $tab
+    echo "</li>";
 }
+echo "</ul>";
 
 // Exercice : écrivez un array avec les indices prenom, nom, email et telephone et mettez y des valeurs.
+
+$contact = array(         // ou on aurait pu écrire les crocher carrer
+    "prenom" => "Laura",
+    "nom" => "THAY",
+    "mail" => "jedonnepasmonmail@mail.com",
+    "telephone" => "0123456789",
+    "ville" => "Paris",
+    "code postal" => "75020",
+    "hobbies" => "crochet",
+);
+
+var_dump($contact);
+
+
 // Puis avec une boucle foreach, affichez les indices et les valeurs dans des <p>,
+
+echo "<ul>";
+foreach($contact as $indice => $valeur) {  // quand il y a 2 variables séparées par une flèche, la 1ere parcourt la colonne des indices et la seconde la colonne des valeurs
+    echo "<li>";
+    echo $indice . ' correspond à ' . $valeur . '<br>';  // on affiche successivement les indices et les valeurs de $tab
+    echo "</li>";
+}
+echo "</ul>";
+
+
 // sauf pour le prenom qui doit être dans un <h3>.
 
 
 # 2 -   Ecrire une fonction arrayToTable() qui reçoit en paramètre un tableau et qui écrit ce tableau dans un
 #       balise <table> sur une ligne
+
+//arrayToTable($contact);
+// a faire pour demain
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //-----------------------
@@ -163,7 +208,19 @@ echo '<pre>'; print_r($auteurs); echo '</pre>';
 // Accéder à la valeur "Flaubert" :
 echo $auteurs[2]['nom'] . '<br>';
 
+foreach ($auteurs as $key => $auteur) {
+ echo '<hr>';
+ echo "<ul>";
+ foreach($auteur as $cleTableau => $valeurLigne) {  // quand il y a 2 variables séparées par une flèche, la 1ere parcourt la colonne des indices et la seconde la colonne des valeurs
+     echo "<li>";
+     echo $cleTableau . ' correspond à ' . $valeurLigne ;  // on affiche successivement les indices et les valeurs de $tab
+     echo "</li>";
+ }
+ echo "</ul>";
+}
+
 echo '<hr>';
+
 
 // Parcourir le tableau avec une boucle for :
 for($i = 0; $i < count($auteurs); $i++) {  // tant que $i est inférieur au nombre d'éléments du tableau, nous entrons dans la boucle
@@ -178,7 +235,7 @@ echo '<hr>';
 # afficher chaque auteur sous la forme : nom prenom ( annee de naissance - annee de mort)
 #
 
-
+# creer un tableau de multiplication de de 1 à 10 dans un tableau de 10x10 avec les entetes de chaque coté 
 
 ?>
 
