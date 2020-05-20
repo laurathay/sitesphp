@@ -179,37 +179,37 @@ function tableDeMultiplication($NbrCol, $NbrLigne) {
   // $NbrCol = "20";
   // $NbrLigne = "10";
 
-  echo '<table border="1" width="400">';
+  echo '<table border="1" width="400">';  //tableau
   // 1ere ligne (ligne 0)
-     echo '<tr>';
-     echo '<td bgcolor="pink"> i X j </td>';
-     for ($j=1; $j<=$NbrCol; $j++) {
-        echo '<td bgcolor="pink">'.$j.'</td>';
+     echo '<tr>';        //meme agencement que dans html
+     echo '<td bgcolor="pink"> i X j </td>'; // pareil que dans html
+     for ($j=1; $j<=$NbrCol; $j++) { // initilisation de la 1ere colonne en tete
+        echo '<td bgcolor="pink">'.$j.'</td>'; // affichage de la 1ere colonne en tete
      }
-     echo '</tr>';
+     echo '</tr>'; // fermeture de la premiere ligne en tete
 
-  for ($i=1; $i<=$NbrLigne; $i++) {
+  for ($i=1; $i<=$NbrLigne; $i++) { // initialisation du nombre de ligne
      echo '<tr>';
-     for ($j=1; $j<=$NbrCol; $j++) {
+     for ($j=1; $j<=$NbrCol; $j++) { // initialisationdu nombre de colonne
          // 1ere colonne (colonne 0)
         if ($j==1) {
-           echo '<td bgcolor="pink">'.$i.'</td>';
+           echo '<td bgcolor="pink">'.$i.'</td>'; // affichage de la premiere colonne en tete
         }
          // colonnes suivantes
            if ($i==$j) {
-              echo '<td bgcolor="yellow">';
+              echo '<td bgcolor="yellow">'; // juste un rajout de couleur pour faire joli sur les memes nombres qui se multiplient
            } else {
               echo '<td>';
            }
          // ------------------------------------------
          // AFFICHAGE ligne $i, colonne $j
-        echo $i*$j;
+        echo $i*$j;    // c'est la que la multiplication du tableau se fait
         echo '</td>';
      }
      echo '</tr>';
      $j=1;
   }
-  echo '</table>';
+  echo '</table>'; // tableau fermeture
 }
 
 
