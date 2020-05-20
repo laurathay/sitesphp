@@ -1,13 +1,10 @@
 <?php
 
 include "config.php";
+include "contenu.php";
 
-$titre = "Menu du Mercredi";
+$menu_a_afficher = $contenuSite ["menus"]["mercredi"];
 
-$entree = "quiche aux poireaux";
-$plat = "curry de poisson";
-$dessert = "roulé mousse au chocolat";
 
-$title_page = $titre;
 
 include $_dossier_template  . "page_menu_du_jour.php";

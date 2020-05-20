@@ -1,13 +1,9 @@
 <?php
 
 include "config.php";
+include "contenu.php";
 
-$titre = "Menu du Samedi";
+$menu_a_afficher = $contenuSite ["menus"]["samedi"];
 
-$entree = "gratin de panais";
-$plat = "poulet roti";
-$dessert = "panna cotta à la crème de marrons";
-
-$title_page = $titre;
 
 include $_dossier_template  . "page_menu_du_jour.php";

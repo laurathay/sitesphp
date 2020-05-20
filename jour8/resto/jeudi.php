@@ -2,12 +2,9 @@
 
 include "config.php";
 
-$titre = "Menu du jeudi";
+include "contenu.php";
 
-$entree = "salade betterave feta";
-$plat = "gratin de courgettes";
-$dessert = "yaourt maison";
+$menu_a_afficher = $contenuSite ["menus"]["jeudi"];
 
-$title_page = $titre;
 
 include $_dossier_template  . "page_menu_du_jour.php";
