@@ -176,8 +176,8 @@ echo "</ul>";
 
 
 function tableDeMultiplication($NbrCol, $NbrLigne) {
-  $NbrCol = "10";
-  $NbrLigne = "10";
+  // $NbrCol = "20";
+  // $NbrLigne = "10";
 
   echo '<table border="1" width="400">';
   // 1ere ligne (ligne 0)
@@ -214,6 +214,59 @@ function tableDeMultiplication($NbrCol, $NbrLigne) {
 
 
 tableDeMultiplication(10,10);
+
+
+// LA VRAIE CORRECTION MAIS bug ligne : 230
+// function creerTableauMultiplication ($nombreLigne, $nombreColonne){
+//
+//   $strHTML = "";
+//
+//   if($nombreLigne > 0 && $nombreColonne > 0) {
+//
+//     $strHTML .= "<table>"; //$strHTML = $strHTML . "<table>";
+//     //creation des lignes
+//
+//     //premiere ligne d'entete
+//     for($l=1; $l<=$nombreLigne ; l++){
+//       $strHTML .= "<tr>";
+//         $strHTML .= "<th>Multiplication</th>";
+//     // BOUCLE
+//       for($premiere_colonne=1; $premiere_colonne <= $nombreColonne; $premiere_colonne++){
+//         $strHTML .= "<th>";
+//         $strHTML .=  $premiere_colonne;
+//         $strHTML .= "<th>" ;
+//       }
+//
+//     //lignes de resultats
+//     for($l=1; $l<=$nombreLigne; $l++){
+//       $strHTML.="<tr>";
+//     }
+//         for($c=1; $c<=$nombreColonne; c++){
+//           $strHTML .= "<td>";
+//           $strHTML .= $l * $c;
+//           $strHTML .= "</td>";
+//         }
+//         $strHTML .= "</tr>";
+//     }
+//     $strHTML .= "</table>";
+//   }
+//
+//   return $strHTML;
+//
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -264,6 +317,30 @@ echo '<hr>';
 # dans une liste ul, li,
 # afficher chaque auteur sous la forme : nom prenom ( annee de naissance - annee de mort)
 
+foreach ($auteurs as $key => $auteur) {
+ echo '<hr>';
+ echo "<ul>";
+ foreach($auteur as $cleTableau => $valeurLigne) {  // quand il y a 2 variables séparées par une flèche, la 1ere parcourt la colonne des indices et la seconde la colonne des valeurs
+     echo "<li>";
+     echo $cleTableau . ' correspond à ' . $valeurLigne ;  // on affiche successivement les indices et les valeurs de $tab
+     echo "</li>";
+ }
+ echo "</ul>";
+}
+
+echo '<ul>'; //on commence par construire le html
+foreach ($auteurs as $key => $auteur){
+  echo"<li>";
+  var_dump($auteur); //voir ce qui a linteiruer
+  echo $auteur["nom"]. " " . ["prenom"]. "("["annee_naissance"] ." - ".["annee_mort"] .")";
+  echo"</li>";
+}
+echo'</ul>';
+
+exit;
+
+
+
 // Accéder à la valeur "Flaubert" :
 // echo $auteurs[2]['nom'] . '<br>';
 //
@@ -279,30 +356,24 @@ echo '<hr>';
 // }
 
 # Ecrire une fonction arrayToTable() qui reçoit en paramètre un tableau et qui écrit ce tableau dans une balise <table> sur une ligne
+$contact = array(
+  "prenom" => "Laura",
+  "nom" => "Thay",
+  "email" => "nogmail@gamil.com",
+  "telephone" => "xxxx",
+);
 
-// function arrayToTable($contact){
-//   $NbrCol = "2";
-//   $NbrLigne = "5";
-//
-//   echo '<table>';
-//   for ($i=1; $i<=$NbrLigne; $i++) {
-//      echo '<tr>';
-//      for ($j=1; $j<=$NbrCol; $j++) {
-//            echo '<td>';
-//             // ------------------------------------------
-//             // AFFICHAGE ligne $i, colonne $j
-//            echo $affichage;
-//             // ------------------------------------------
-//            echo '</td>';
-//      }
-//      echo '</tr>';
-//      $j=1;
-//   }
-//   echo '</table>';
-// }
-// arrayToTable($contact);
-//
-// $affichage = "ligne1";
+
+function arrayToTable($minion){
+
+    echo '<table style="border: 5px pink solid;">' .'<tr>'.PHP_EOL;
+      foreach($minion as $cle => $valeur){
+        echo "<td>$valeur</td>".PHP_EOL;
+      }
+        echo "</tr>" . "</table>";
+};
+
+  echo arrayToTable($contact).PHP_EOL;
 
 
 ?>
