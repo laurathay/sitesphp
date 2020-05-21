@@ -4,7 +4,7 @@
 <!-- mettre par dessus image le texte de description -->
 
      <div class="container">
-         <img src="images/museum2.jpg" alt="fond">
+         <img src="templates/site2020/images/museum2.jpg" alt="fond">
 
              <div id="intro_color" >
 
@@ -36,7 +36,7 @@
      <!-- une oeuvre qui sera tiré au hasard avec description -->
    <div class="container2">
 
-         <img src="images/arty.png" alt="arty">
+         <img src="templates/site2020/images/arty.png" alt="arty">
 
          <div id="intro_arty" >
 
@@ -77,6 +77,29 @@
            </section>
 
    <hr>
+
+   <!-- une oeuvre qui sera tiré au hasard avec description -->
+<div class="container2">
+
+      <img src="templates/site2020/images/arty3.jpg" alt="arty">
+
+      <div id="intro_arty" >
+
+            <div class="animated-title">
+               <div class="text-top">
+                 <div>
+                   <span>"It's not about where your starting point is,</span>
+                   <span>that will get you there.</span>
+                 </div>
+               </div>
+               <div class="text-bottom">
+                 <div>for the win!</div>
+               </div>
+             </div>
+
+      </div>
+
+</div>
 
 
    </main>

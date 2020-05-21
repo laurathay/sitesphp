@@ -5,9 +5,10 @@ $contenuSite = array(
   "accueil" => array(
     "titre" => "Le Musée ThayThay",
     "titre2" => " Notre photographe du moment",
-    "animation" => "Le musée THAY THAY est un musée national inauguré en 1986, situé dans le 7ᵉ arrondissement de Paris le long de la rive gauche de la Seine. Il est installé dans l’ancienne gare d'Orsay, construite par Victor Laloux de 1898 à 1900 et réaménagée en musée sur décision du Président de la République Valéry Giscard d'Estaing",
-    "animation2" => " It's not about where your starting point is, ",
-    "animation3" => " that will get you there. ",
+    "texte1" => "Le musée THAY THAY est un musée national inauguré en 1986, situé dans le 7ᵉ arrondissement de Paris le long de la rive gauche de la Seine. Il est installé dans l’ancienne gare d'Orsay, construite par Victor Laloux de 1898 à 1900 et réaménagée en musée sur décision du Président de la République Valéry Giscard d'Estaing",
+    "animation" => " It\'s not about where your starting point is, ",
+    "animation2" => " that will get you there. ",
+    "animation3" => "for the win!",
     "titre3" => " Notre exposition du moment ",
 
 

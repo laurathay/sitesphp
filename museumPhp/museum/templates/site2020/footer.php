@@ -1,28 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <!-- font awesome link -->
-    <script src="https://kit.fontawesome.com/682d71be2a.js" crossorigin="anonymous"></script>
-
-    <meta charset="utf-8">
-    <title> Accueil Musée ThayThay</title>
-    <!-- lien bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-
 
 <footer>
 
   <!-- la navigation et lien conditions générales et l'adresse du musée -->
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">  <img src="images/logo.png" alt="logo"> </a>
+    <a class="navbar-brand" href="#">  <img src="templates/site2020/images/logo.png" alt="logo"> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
