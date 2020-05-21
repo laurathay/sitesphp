@@ -43,9 +43,18 @@ function choisir_un_meilleur_nom($param_1, $param_2) {
     }
 }
 
-# echo choisir_un_meilleur_nom("Nicolas", "Hennette");
-# echo choisir_un_meilleur_nom("Hennette", "Nicolas");
-# echo choisir_un_meilleur_nom("tata", "toto");
+# echo choisir_un_meilleur_nom("Nicolas", "Hennette"); //2
+# echo choisir_un_meilleur_nom("Hennette", "Nicolas"); // 1
+# echo choisir_un_meilleur_nom("tata", "toto"); // 0
+
+//Mon interprétation c'est que si la longueur de la chaine de caractère du prénom nicolas et inferieur à la longueur
+// de la chaine de caractere de Hennette alors il va renvoyer 2 et les deux parametres ont le meme nombre de
+// chaine de caractere ca va renvoyer 0 et si le parametre 1 est supérieur donc 1
+
+
+
+
+
 
 
 /////////////////////////////////////////////////////////////////////
@@ -57,7 +66,12 @@ function code_php() {
     // n'oubliez pas de regarder le code source de votre page !
 }
 
-# code_php();
+ code_php();
+
+//Mon interprétation c'est que y aura 3 sauts de ligne avant d'afficher le texte, j'avais pas vu les guillemets
+// ca n'affiche que le hr pcq y a pas de echo code_php(), il faut appeler la fonction avant.
+
+
 
 
 /////////////////////////////////////////////////////////////////////
@@ -75,8 +89,11 @@ function format_c($je_veux_formater = TRUE) {
     }
 }
 
-# format_c(FALSE);
-# format_c(TRUE);
+# format_c(FALSE); //ca va afficher le premier
+# format_c(TRUE);// ca va afficher le deuxieme // ca affiche fatal error
+
+
+//mon interprétation:
 
 /////////////////////////////////////////////////////////////////////
 html_separation(); //////////////////////////////////////////////////
@@ -160,7 +177,7 @@ function nom_de_fonction_pas_clair_1($parametre_1) {
     $b = range('a', 'z');
     $bb = range(0, 9);
 
-    $c = array_merge($a, $b, $bb); //autre fonction a check 
+    $c = array_merge($a, $b, $bb); //autre fonction a check
 
     $n = count($c);
 
