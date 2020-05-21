@@ -114,9 +114,10 @@ function je_sais_pas_ce_que_je_fais($nombre){
 }
 
 //essayer de comprendre la fonction
-# je_sais_pas_ce_que_je_fais(30);
-# je_sais_pas_ce_que_je_fais(-50);
-# je_sais_pas_ce_que_je_fais(15);
+#je_sais_pas_ce_que_je_fais(30); //ca va afficher en rouge le nombre
+#je_sais_pas_ce_que_je_fais(-50); //ca va afficher en bleu le nombre
+#je_sais_pas_ce_que_je_fais(15); // ca va afficher en vert le nombre
+
 
 
 function je_sais_pas_ce_que_je_fais_BIS(){
@@ -130,9 +131,13 @@ function je_sais_pas_ce_que_je_fais_BIS(){
     }
 }
 
- # je_sais_pas_ce_que_je_fais_BIS();
+ #je_sais_pas_ce_que_je_fais_BIS();
 
  //essayer de comprendre la fonction
+ // i est initialiser a 25 donc sera en rouge et ainsi de suite jusqu'a -15 donc va passer par bleu puis vert avec
+ // un saut de ligne entre chaque chiffre
+
+
 
 /////////////////////////////////////////////////////////////////////
 html_separation(); //////////////////////////////////////////////////
