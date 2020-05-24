@@ -12,7 +12,14 @@
 // écrire
 // <a href='https://www.lesdecodeuses.fr' class='lien_rouge' target='_blank'>Les décodeuses</a>
 
+fonction html_a( $texte , $url,  $class, $new_window){
+  $texte = "<p> Les descodeuses </p>";
+  $url = "<a href='http://www.lesdecodeuses.fr'</a>";
+  $class = 'div class='lien_rouge'';
+  $new_window = 'target='_blank'';
 
+  echo html_a();
+};
 
 
 // 2 -
@@ -25,6 +32,13 @@
 // écrit :
 // <div class="texte_rouge">Vivement lundi</div>
 
+ fonction html_tag($nomDuTag, $contenu, $class){
+   $nomDuTag = 'div';
+   $contenu ="Vivement ludni" ;
+   $class = 'texte_rouge' ;
+
+   echo html_tag();
+ };
 
 
 
@@ -42,5 +56,12 @@
 //    <li>pomme</li>
 // <ul>
 
+fonction html_ul($tableau){
+    $tableau = '<ul>';
+    while ($donnees = ["kiwi"], ["banane"], ["pomme"]){
+      $tableau .= '<li> "kiwi, banane, pomme "</li>';
+  }
+  $tableau .='</ul>';
+}
 
-
+echo ($tableau);
