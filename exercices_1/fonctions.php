@@ -157,7 +157,7 @@ function parcourir_tableau($tableau) {
 
     echo "<ul>"  . PHP_EOL;
     foreach($tableau as $key => $value) {
-        if(is_array($value)) {
+        if(is_array($value)) { // détermine si la variable est un tableau
             parcourir_tableau($value); // WHAT ? L'enfoiré ! a check MDN
         } else {
             echo "<li>" . $value . "</li>"  . PHP_EOL;
@@ -166,8 +166,8 @@ function parcourir_tableau($tableau) {
     echo "</ul>" . PHP_EOL;
 }
 
-# parcourir_tableau($tab_1);
-# parcourir_tableau($tab_2);
+# parcourir_tableau($tab_1); // affiche une liste, si la valeur est une variable fait partie du tableau la fonction s'applique sinon elle affiche juste la valeur?
+# parcourir_tableau($tab_2); // donc celle ci affiche les détails du premier tableau ? pas compris ...
 
 
 html_separation();
@@ -179,18 +179,18 @@ function nom_de_fonction_pas_clair_1($parametre_1) {
     // fonction bien obscure !
 
     $a = range('A', 'Z');  // fonction utile a connaitre , qu'est ce que fait range?
-    $b = range('a', 'z');
+    $b = range('a', 'z'); //  Crée un tableau contenant un intervalle d'éléments
     $bb = range(0, 9);
 
-    $c = array_merge($a, $b, $bb); //autre fonction a check
+    $c = array_merge($a, $b, $bb); //autre fonction a check : fusionne les variables donc les tableaux
 
-    $n = count($c);
+    $n = count($c); // compte c
 
     $s = "";
 
     for($i=1; $i<=$parametre_1; $i++) {
-        $h = rand(0, $n - 1); // Pourquoi on met - 1 ?
-        $s .= $c[$h];
+        $h = rand(0, $n - 1); // Pourquoi on met - 1 ? pour que ca génére une valeur aléatoire inentre 0 et 9 ?
+        $s .= $c[$h]; // ici donc ca ferait
     }
 
     return $s;
@@ -198,7 +198,7 @@ function nom_de_fonction_pas_clair_1($parametre_1) {
 }
 
 # echo nom_de_fonction_pas_clair_1(10);
-# echo nom_de_fonction_pas_clair_1(100);
+# echo nom_de_fonction_pas_clair_1(100); // un mixe de 100 elements randomly chosen avec chiffres et abc
 
 
 
