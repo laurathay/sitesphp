@@ -43,7 +43,7 @@
 </main>
 
 <footer>
-    Les décodeuses - <? php echo date(Y) ?>
+    Les décodeuses - <?php echo date("Y") ?>
 </footer>
 
 <!--

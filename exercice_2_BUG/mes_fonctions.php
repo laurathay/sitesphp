@@ -26,7 +26,7 @@ function unVers($nbMotDansLeVers = 6) {
     include "mots_francais.php";
     $mots_francais = array_flip($mots_francais);
     // ma clé devient valeur et ma valeur devient la clé.
-    $hasard_cle_mots_francais  = array_rand($mots_francais,5);
+    $hasard_cle_mots_francais  = array_rand($mots_francais, $nbMotDansLeVers); //pour etre sure d'en tirer 6
     // Tire des clés au hasard dans mon tableau
     $str_5_mots_francais = implode( " ", $hasard_cle_mots_francais);
     // transforme le tableau $hasard_cle_5_mots_francais en chaine de caractère.
