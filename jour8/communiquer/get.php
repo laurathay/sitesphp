@@ -48,6 +48,14 @@
 
         echo "<hr>";
 
+        if (isset($_GET["multiplierpar"]) ) {  //vérifier que la variable existe, si oui on l
+          echo "<h1>" . $_GET["multiplierpar"] ."</h1>";
+          tableDeMultiplication ($_GET["multiplierpar"]);
+
+        }
+        echo "<hr>";
+
+
         tableDeMultiplication($_GET["multiplierpar"]);
 
         echo "<hr>";
@@ -60,11 +68,12 @@
 
           <?php
 
-
+        echo"<hr>";
 
         # EXERCICE 2 : Faire 10 liens qui vont nous permettre d'afficher la table de multiplication de 1 à 10
-
-              
+              for($i=1; $i<=10; $i++){
+                echo"<a href=\"get.php?multiplierpar=$i\"> Multiplication $i </a> <br>";
+              }
 
         ?>
 
@@ -75,8 +84,9 @@
         un formulaire
 
 
-        <form method="get" action="get.php#form1"> <!-- Attention : dans la construction d'une URL, ne pas confondre les paramètres d'URL qui sont séparé par ? et & avec les ancres qui sont à la fin de l'URL séparé par # -->
-            <input name="nomChamp" type="text">
+        <form method="get" action="get.php"> <!-- Attention : dans la construction d'une URL, ne pas confondre les paramètres d'URL qui sont séparé par ? et & avec les ancres qui sont à la fin de l'URL séparé par # -->
+            <input name="nom" type="text">
+            <input name="prenom" type="text">
             <button type="submit">Valider</button>
         </form>
 
