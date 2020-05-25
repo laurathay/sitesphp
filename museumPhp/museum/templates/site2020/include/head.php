@@ -13,7 +13,7 @@
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="templates/site2020/css/style.css" />
+    <link rel="stylesheet" href="<?php echo $_url_base . $_dossier_template ?>css/style.css" />
 </head>
 
 <body>

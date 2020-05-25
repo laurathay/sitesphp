@@ -48,18 +48,23 @@
 
         echo "<hr>";
 
-        tableDeMultiplication(3);
+        tableDeMultiplication($_GET["multiplierpar"]);
 
         echo "<hr>";
 
         # EXERCICE 1: Faire un lien qui va me permettre d'afficher la table de multiplication de 7
+          ?>
 
+
+              <a href="get.php?multiplierpar=7"> multiplication 7 </a>
+
+          <?php
 
 
 
         # EXERCICE 2 : Faire 10 liens qui vont nous permettre d'afficher la table de multiplication de 1 à 10
 
-
+              
 
         ?>
 
