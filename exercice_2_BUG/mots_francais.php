@@ -1,7 +1,7 @@
 <?php
 
 $mots_francais = array(
-    "Aaron"
+    "Aaron",
     "abaissé",
     "abaissement",
     "abaisser",
