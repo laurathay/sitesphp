@@ -88,9 +88,9 @@ function format_c($je_veux_formater = TRUE) {
         echo "Aucun fichier n'a été supprimé.";
     }
 }
-
-# format_c(FALSE); //ca va afficher le premier
-# format_c(TRUE);// ca va afficher le deuxieme // ca affiche fatal error
+#format_c() prend la valeure true par defaut
+# format_c(FALSE); // la fonction n'existe pas en soi
+# format_c(TRUE);// ca affiche fatal error
 
 
 //mon interprétation:
@@ -120,18 +120,18 @@ function je_sais_pas_ce_que_je_fais($nombre){
 
 
 
-function je_sais_pas_ce_que_je_fais_BIS(){
+function thermometrer(){
     // Attention !
     // dans le code de cette fonction, j'utilise la fonction précédente "je_sais_pas_ce_que_je_fais"
     // si vous avez changé son nom, il faudra le repercuter
 
     for($i=25; $i>=-15; $i--) {
-        je_sais_pas_ce_que_je_fais($i);
+        thermometrer($i);
         echo "<br>";
     }
 }
 
- #je_sais_pas_ce_que_je_fais_BIS();
+ #thermometrer();
 
  //essayer de comprendre la fonction
  // i est initialiser a 25 donc sera en rouge et ainsi de suite jusqu'a -15 donc va passer par bleu puis vert avec
@@ -158,7 +158,7 @@ function parcourir_tableau($tableau) {
     echo "<ul>"  . PHP_EOL;
     foreach($tableau as $key => $value) {
         if(is_array($value)) { // détermine si la variable est un tableau
-            parcourir_tableau($value); // WHAT ? L'enfoiré ! a check MDN
+            parcourir_tableau($value); // c'est a ce moment que la fonction s'appelle elle meme
         } else {
             echo "<li>" . $value . "</li>"  . PHP_EOL;
         }
@@ -167,37 +167,38 @@ function parcourir_tableau($tableau) {
 }
 
 # parcourir_tableau($tab_1); // affiche une liste, si la valeur est une variable fait partie du tableau la fonction s'applique sinon elle affiche juste la valeur?
-# parcourir_tableau($tab_2); // donc celle ci affiche les détails du premier tableau ? pas compris ...
+# parcourir_tableau($tab_2); // une fonction qui s'appelle elle-meme , un tableau qui affiche un autre tableau
 
 
 html_separation();
 
 ////////////////////////////////////////////////////
 
-function nom_de_fonction_pas_clair_1($parametre_1) {
+function creerMotDePasse($parametre_1) {
 
     // fonction bien obscure !
 
-    $a = range('A', 'Z');  // fonction utile a connaitre , qu'est ce que fait range?
-    $b = range('a', 'z'); //  Crée un tableau contenant un intervalle d'éléments
-    $bb = range(0, 9);
+    $alpha_maj = range('A', 'Z');  // fonction utile a connaitre , qu'est ce que fait range?
+    $alpha_min = range('a', 'z'); //  Crée un tableau de a à z et de A à Z
+    $chiffres = range(0, 9);
 
-    $c = array_merge($a, $b, $bb); //autre fonction a check : fusionne les variables donc les tableaux
+    $tableau_global = array_merge($a, $b, $bb); //autre fonction a check : fusionne les variables donc les tableaux
 
-    $n = count($c); // compte c
+    $nb_ele_tableau = count($c); // compte combien j'ai déléments dans ma variable c
 
-    $s = "";
+    $motdepasse = ""; // si ne retourne pas le mdp = erreur. initialise pour renvoyer le mot de passe meme si y a rien, existe donc. créer une chaine vide, celle que je renvoie a la fin. il vaut mieux essayer d'utiliser des noms compréhensible a la lecture .
 
     for($i=1; $i<=$parametre_1; $i++) {
-        $h = rand(0, $n - 1); // Pourquoi on met - 1 ? pour que ca génére une valeur aléatoire inentre 0 et 9 ?
-        $s .= $c[$h]; // ici donc ca ferait
+        $valeur_tableau = rand(0, $nb_elem_tableau - 1); // Pourquoi on met - 1 ? pour que ca génére une valeur aléatoire i entre 0 et 9 ?
+        $motdepasse .= $c[$h]; // ici je prends la valeur correspondant a ce chiffre et je la colle a la chaine
     }
 
-    return $s;
+    return $motdepasse;
 
 }
 
-# echo nom_de_fonction_pas_clair_1(10);
+# echo nom_de_fonction_pas_clair_1(10); // permet de générer un mot de passe.
+
 # echo nom_de_fonction_pas_clair_1(100); // un mixe de 100 elements randomly chosen avec chiffres et abc
 
 
