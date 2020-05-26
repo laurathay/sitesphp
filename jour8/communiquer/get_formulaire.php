@@ -20,6 +20,41 @@
 
 
     <form method="get" action="#result">
+
+        <div >
+          <label for="nom"> Prénom</label>
+          <input type="text" name="prenom" placeholder="prénom">
+        </div>
+        <div >
+          <label for="noom"> Nom</label>
+          <input type="text" name="nom" placeholder="nom">
+        </div>
+        <div >
+          <label for="nom"> Année de naissance</label>
+          <input type="text" name="DDN" placeholder="DDN">
+        </div>
+        <div >
+          <label for="nom"> Adresse email </label>
+          <input type="text" name="adresse email" placeholder="email">
+        </div>
+        <div class="sep-20">
+          Pays de naissance
+            <br/>
+            <select name="choix_pays[]" multiple class="multiselect"> <!-- on met [] pour le mettre dans un tableau et pouvoir en selectionner plusieurs -->
+                <?php
+                foreach ($pays as $un_pays) {
+                    echo "<option value='$un_pays[0]' >$un_pays[1]</option>" . PHP_EOL;
+                }
+                ?>
+            </select>
+        </div>
+
+
+                <div class="sep-20">
+                    <button>Valider</button>
+                </div>
+
+
         <div>
             <label for="nom">Entrer votre prénom</label>
             <input type="text" name="prenom" placeholder="prénom">
@@ -34,10 +69,10 @@
             + Choisir un fruit <br>
             + puis faire un essai avec plusieurs fruits<br><br>
 
-            Banane<input type="checkbox" name="fruits" value="Banane"> <br>
-            Kiwi<input type="checkbox" name="fruits" value="Kiwi"> <br>
-            Ananas<input type="checkbox" name="fruits" value="Ananas"> <br>
-            Fraise<input type="checkbox" name="fruits" value="Fraise"> <br>
+            Banane<input type="checkbox" name="fruits[]" value="Banane"> <br> <!--pour que php le lise et le mette dans un tableau []-->
+            Kiwi<input type="checkbox" name="fruits[]" value="Kiwi"> <br>
+            Ananas<input type="checkbox" name="fruits[]" value="Ananas"> <br>
+            Fraise<input type="checkbox" name="fruits[]" value="Fraise"> <br>
         </div>
 
         <div class="sep-20">
@@ -54,10 +89,10 @@
         <div class="sep-20">
             Choisir 1 ou plusieurs pays (maitenir touche CTRL pour pouvoir en choisir plusieurs)
             <br/>
-            <select name="choix_pays" multiple class="multiselect">
+            <select name="choix_pays[]" multiple class="multiselect"> <!-- on met [] pour le mettre dans un tableau et pouvoir en selectionner plusieurs -->
                 <?php
                 foreach ($pays as $un_pays) {
-                    echo "<option value='$un_pays[3]' >$un_pays[3]</option>" . PHP_EOL;
+                    echo "<option value='$un_pays[0]' >$un_pays[3]</option>" . PHP_EOL;
                 }
                 ?>
             </select>
@@ -93,11 +128,20 @@
         <div class="title">Contenu de la variable $_GET</div>
         <div class="content">
             <?php
+            foreach($_GET["fruits"] as $valFruit){
+                echo " - " . $valFruit . "<br>";
+            }
             var_dump($_GET);
             // Tant que nous ne passons pas paramètre d'URL le tableau reste vide.
             ?>
         </div>
     </div>
+
+
+    <?php
+    if(isset($_GET["fruits"]))
+    ?>
+
 
 
 </div>

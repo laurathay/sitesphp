@@ -52,6 +52,8 @@
           echo "<h1>" . $_GET["multiplierpar"] ."</h1>";
           tableDeMultiplication ($_GET["multiplierpar"]);
 
+        } else {
+          echo "Choisir une table de multiplication à afficher";
         }
         echo "<hr>";
 
@@ -84,21 +86,31 @@
         un formulaire
 
 
-        <form method="get" action="get.php"> <!-- Attention : dans la construction d'une URL, ne pas confondre les paramètres d'URL qui sont séparé par ? et & avec les ancres qui sont à la fin de l'URL séparé par # -->
-            <input name="nom" type="text">
-            <input name="prenom" type="text">
+        <form method="get" action="get_reponse.php"> <!-- Attention : dans la construction d'une URL, ne pas confondre les paramètres d'URL qui sont séparé par ? et & avec les ancres qui sont à la fin de l'URL séparé par # -->
+            NOM : <input name="nom" type="text"> <br>
+            PRENOM : <input name="prenom" type="text">  <br>
+            AGE : <input name="age" type="number">
             <button type="submit">Valider</button>
         </form>
 
         <?php
         # EXERCICE  :   créer un formulaire qui va nous permettre d'afficher la table de multiplication de la
         #               valeur que nous avons choisi dans un champ du formulaire.
+
         ?>
+
+          <hr>
+          <form method="get" action="get.php"> <!-- Attention : dans la construction d'une URL, ne pas confondre les paramètres d'URL qui sont séparé par ? et & avec les ancres qui sont à la fin de l'URL séparé par # -->
+              Je veux multiplier par : <input name="multiplierpar" type="number">
+              <button type="submit">Valider</button>
+          </form>
+          <hr>
 
 
 
     <h3>Formulaire 2</h3>
     <a id="form2"></a>
+    
     <form method="get" action="get.php#form2">
         Nous allons écrire à l'écran la valeur du champ suivant
         <br>
