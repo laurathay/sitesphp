@@ -3,26 +3,30 @@
       <li>
             <a href="index.php">Accueil</a>
       </li>
+
+        
+
+
       <li>
-            <a href="lundi.php">Lundi</a>
+            <a href="jour.php?menuChoisi=lundi">Lundi</a>
       </li>
       <li>
-            <a href="mardi.php">Mardi</a>
+            <a href="jour.php?menuChoisi=mardi">Mardi</a>
       </li>
         <li>
-            <a href="mercredi.php">Mercredi</a>
+            <a href="jour.php?menuChoisi=mercredi">Mercredi</a>
         </li>
         <li>
-            <a href="jeudi.php">Jeudi</a>
+            <a href="jour.php?menuChoisi=jeudi">Jeudi</a>
         </li>
         <li>
-            <a href="vendredi.php">Vendredi</a>
+            <a href="jour.php?menuChoisi=vendredi">Vendredi</a>
         </li>
         <li>
-            <a href="samedi.php">Samedi</a>
+            <a href="jour.php?menuChoisi=samedi">Samedi</a>
         </li>
         <li>
-            <a href="dimanche.php">Dimanche</a>
+            <a href="jour.php?menuChoisi=dimanche">Dimanche</a>
         </li>
 
     </ul>

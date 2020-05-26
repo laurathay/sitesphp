@@ -38,7 +38,7 @@ $contenuSite = array(
         "plat" => "Tchiekie: semoule de magnoc accompagné de la loco, le tout acidulé et accompagné de poulet braisé",
         "dessert" => "Tarte à la fraise",
     ),
-    "samedi" => array(
+    "week-end" => array(
       "titre" => "Saturday you ain't eating, drinking it's going to be",
         "entree" => " Piscine: champagne et fraise ",
         "plat" => "Whisky Mika",
