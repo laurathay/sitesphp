@@ -1,4 +1,5 @@
 <?php
+  session_start();
     include "pays_du_monde.php"; //récupération des données de pays
 ?>
 
@@ -21,6 +22,9 @@
 
 
               <?php
+
+                var_dump($_SESSION);
+
               if(!empty($_GET["err"]) && $_GET["err"] == "champ")
               {
                 echo"<div class='error'>";
@@ -134,3 +138,9 @@
 
 
 </html>
+
+
+<?php
+    $_SESSION = array(); //pour vider le tableau a chaque fois
+    unset($_SESSION["err"]); // pour vider les erreurs type  
+ ?>

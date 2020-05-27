@@ -31,7 +31,7 @@
 
 
     <?php
-
+        session_start(); // sans ca, ca ne marche pas
         // Oups ! ça ne fonctionne pas !
         // pourtant j'ai dit qu'elle était toujours disponible !!!
         //
@@ -52,6 +52,8 @@
         // Ajouter des valeurs avec des clés différentes dans ma variable de session
 
         //
+
+        $_SESSION["prenom"] = "Laura";
 
     ?>
 

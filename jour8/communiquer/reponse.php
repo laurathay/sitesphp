@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // 1: on vérifie le champ
 
@@ -11,7 +12,12 @@ foreach($nomChampsObligatoires as $nomChamp) {
     // 2eme passage $_GET["nom"]
     // ... etc
 
-    header("location:formulaire_exo.php?err=champ&problemechamp=$nomChamp"); // de retourner vers l'url fourni lorsque le champ est vide
+    //header("location:formulaire_exo.php?err=champ&problemechamp=$nomChamp"); // de retourner vers l'url fourni lorsque le champ est vide
+
+    $_SESSION["err"] = "champ";
+    $_SESSION["problemechamp"] = $nomChamp;
+
+    header("location:formulaire_exo.php");
 
   }
   echo "<br>";
