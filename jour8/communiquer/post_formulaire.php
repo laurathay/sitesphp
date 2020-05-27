@@ -34,10 +34,10 @@
             + Choisir un fruit <br>
             + puis faire un essai avec plusieurs fruits<br><br>
 
-            Banane<input type="checkbox" name="fruits" value="Banane"> <br>
-            Kiwi<input type="checkbox" name="fruits" value="Kiwi"> <br>
-            Ananas<input type="checkbox" name="fruits" value="Ananas"> <br>
-            Fraise<input type="checkbox" name="fruits" value="Fraise"> <br>
+            Banane<input type="checkbox" name="fruits[]" value="Banane"> <br>  <!-- on met dans un tableau avec [] pour pouvoir en selectionner plusieurs -->
+            Kiwi<input type="checkbox" name="fruits[]" value="Kiwi"> <br>
+            Ananas<input type="checkbox" name="fruits[]" value="Ananas"> <br>
+            Fraise<input type="checkbox" name="fruits[]" value="Fraise"> <br>
         </div>
 
         <div class="sep-20">
@@ -54,7 +54,7 @@
         <div class="sep-20">
             Choisir 1 ou plusieurs pays (maitenir touche CTRL pour pouvoir en choisir plusieurs)
             <br/>
-            <select name="choix_pays" multiple class="multiselect">
+            <select name="choix_pays[]" multiple class="multiselect">  <!-- pareil pour pouvoir en selectionnner plusieurs  -->
                 <?php
                 foreach ($pays as $un_pays) {
                     echo "<option value='$un_pays[3]' >$un_pays[3]</option>" . PHP_EOL;
@@ -68,7 +68,7 @@
             <input type="radio" name="pire_php" value="Includes"> Les INCLUDE <br>
             <input type="radio" name="pire_php" value="fonctions"> Les Fonctions <br>
             <input type="radio" name="pire_php" value="boucles"> Les boucles <br>
-            <input type="radio" name="pire_php" value="get"> $_GET[]<br>
+            <input type="radio" name="pire_php" value="get"> $_POST[]<br>
             <input type="radio" name="pire_php" value="gymnastique"> La gymnastique<br>
         </div>
 
@@ -90,7 +90,7 @@
 
     <a id="result"></a>
     <div class="showme">
-        <div class="title">Contenu de la variable $_GET</div>
+        <div class="title">Contenu de la variable $_POST</div>
         <div class="content">
             <?php
             var_dump($_POST);
