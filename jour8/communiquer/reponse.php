@@ -2,13 +2,20 @@
 
 // 1: on vérifie le champ
 
-$nomChampObligatoires = ["prenom", "nom", "email", "annee_naissance", "pays_de_naissance"];
+$nomChampsObligatoires = ["prenom", "nom", "email", "annee_naissance", "pays_de_naissance"];
 
-foreach ($nomChampObligatoires as $nomChamp) {
+foreach($nomChampsObligatoires as $nomChamp) {
+
   if( empty( $_GET [$nomChamp])){
-    header("location:formulaire_exo.php?err=champ&probleme=$nomChamp"); // de retourner vers l'url fourni lorsque le champ est vide
+    // 1er passage : $_GET["prenom"]
+    // 2eme passage $_GET["nom"]
+    // ... etc
+
+    header("location:formulaire_exo.php?err=champ&problemechamp=$nomChamp"); // de retourner vers l'url fourni lorsque le champ est vide
+
   }
   echo "<br>";
+
 }
 
 

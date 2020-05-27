@@ -78,7 +78,10 @@ include "mesfonctions.php";
             {
                 echo "Aucune valeur n'a été entrée.";
             } else {
-                echo $_POST["text_libre_script"];
+                echo
+                nl2br(  //new line to br = nlbr, pour mettre de l'espace entre chaque mots comme écrit  (l'ordre est important!!)
+                  htmlspecialchars($_POST["text_libre_script"])// pour eviter que les gens mettent du js ou autre , traduis tout en html
+              );
             }
             ?>
         </div>

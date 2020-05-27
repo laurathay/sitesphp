@@ -21,9 +21,11 @@
 
 
               <?php
-              if(!empty($_GET["err"]))
+              if(!empty($_GET["err"]) && $_GET["err"] == "champ")
               {
+                echo"<div class='error'>";
                 echo "rempli tout";
+                echo"</div>";
               }
 
               if(!empty($_GET["err"]) && $_GET["err"] == "mail"){
@@ -31,38 +33,37 @@
                 echo "merci de verifier votre email ";
                 echo "</div>";
               }
+
+              function addClassErreurChamp($champVide){
+                if (!empty($_GET["problemechamp"]) && $_GET["problemechamp"] == "$champVide"){
+                  echo "erreurchamp";
+                }
+               }
+
               ?>
 
 
               <form method="get" action="reponse.php">
 
-                  <div class="champ" >
+                  <div class="champ <?php addClassErreurChamp("prenom");?> ">
                     <label for="nom"> Prénom</label>
                     <input type="text" name="prenom" placeholder="prénom">
                   </div>
                   <br>
 
-                  <div class="champ"  >
+                  <div class="champ <?php addClassErreurChamp("nom");?> ">
                     <label for="nom"> Nom</label>
                     <input type="text" name="nom" placeholder="nom">
                   </div>
                   <br>
 
-                  <div  class="champ
-                    <?php
-                      if (!empty($_GET["problemechamp"]) && $_GET["problemechamp"] == "pseudo"){
-                        echo "erreurchamp";
-                      }
-                    ?>
-
-
-                  " >
+                  <div  class="champ <?php addClassErreurChamp("pseudo");?>">                  " >
                     <label for="pseudo"> Pseudo</label>
                     <input type="text" name="pseudo" placeholder="pseudo">
                   </div>
                   <br>
 
-                  <div class="champ"  >
+                  <div class="champ <?php addClassErreurChamp("annee_naissance");?>" >
                     <label for="nom"> Année de naissance</label>
                     <select name="annee_naissance" placeholder="DDN">
 
@@ -78,13 +79,13 @@
                   </div>
                   <br>
 
-                  <div  class="champ" >
+                  <div  class="champ <?php addClassErreurChamp("email");?>">
                     <label for="nom"> Adresse email </label>
                     <input type="text" name="email" placeholder="email">
                   </div>
                   <br>
 
-                  <div  class="champ" >
+                  <div  class="champ <?php addClassErreurChamp("pays_de_naissance");?>" >
                     Pays de naissance
                       <br/>
                       <select name="pays_de_naissance" multiple class="multiselect"> <!-- on met [] pour le mettre dans un tableau et pouvoir en selectionner plusieurs -->
