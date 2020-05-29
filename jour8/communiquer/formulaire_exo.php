@@ -49,19 +49,19 @@
 
               <form method="get" action="reponse.php">
 
-                  <div class="champ <?php addClassErreurChamp("prenom");?> ">
+                  <div class="champ <?php addClassErreurChamp("prenom");?>" >
                     <label for="nom"> Prénom</label>
                     <input type="text" name="prenom" placeholder="prénom">
                   </div>
                   <br>
 
-                  <div class="champ <?php addClassErreurChamp("nom");?> ">
+                  <div class="champ <?php addClassErreurChamp("nom");?>" >
                     <label for="nom"> Nom</label>
                     <input type="text" name="nom" placeholder="nom">
                   </div>
                   <br>
 
-                  <div  class="champ <?php addClassErreurChamp("pseudo");?>">                  " >
+                  <div  class="champ <?php addClassErreurChamp("pseudo");?>" >                  " >
                     <label for="pseudo"> Pseudo</label>
                     <input type="text" name="pseudo" placeholder="pseudo">
                   </div>
@@ -142,5 +142,5 @@
 
 <?php
     $_SESSION = array(); //pour vider le tableau a chaque fois
-    unset($_SESSION["err"]); // pour vider les erreurs type  
+    unset($_SESSION["err"]); // pour vider les erreurs type
  ?>

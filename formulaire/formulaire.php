@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  $_SESSION();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -12,7 +18,7 @@
       <!-- normal -->
       <link rel="stylesheet" href="formulaire.css">
       <meta charset="utf-8">
-      <title> formulaire php </title>
+      <title> formulaire d'authentification php </title>
 
       <!-- responsive -->
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -52,9 +58,9 @@
                         <!-- Tabs Titles -->
 
                         <!-- Login Form -->
-                        <form>
-                          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-                          <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+                        <form method="post" action="verifier_login.php"> <!-- c'est cette ligne qui est important avec action pour voir les réponses  -->
+                          <input type="text" id="login" class="fadeIn second" name="identifiant" placeholder="login"> <!-- c'est le name qui est important pour le fichier verigier login -->
+                          <input type="password" id="password" class="fadeIn third" name="mdp" placeholder="password">
                           <input type="submit" class="fadeIn fourth" value="Log In">
                         </form>
 
