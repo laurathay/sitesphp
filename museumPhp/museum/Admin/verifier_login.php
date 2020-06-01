@@ -1,27 +1,27 @@
 <?php
 session_start();
 var_dump($_POST);
-
 //login Descodeuse
 // mdp PHP2020
 
-if(
+if (
+
   // on verifie dabord que ca existe
   isset($_POST["identifiant"]) &&
   isset($_POST["mdp"]) &&
-  $_POST["identifiant"] == "Descodeuse" &&
-  $_POST["mdp"] == "PHP2020" ){
+  $_POST["identifiant"] == "lol" &&
+  $_POST["mdp"] == "lol" ){
   // je vais vers mon Site
 
     $_SESSION["peut_se_connecter"] = TRUE;
 
-    header("location:http://localhost:8888/jour8/communiquer/exercice_form_get/part1/formulaire_post.php");
-    exit;
+    header("location:admin.php");
 
 } else {
   // je ne co pas
-  header("location:formulaire.php");
+  header("location:login.php");
   echo "re essaie encore";
 }
+exit;
 
  ?>

@@ -1,4 +1,13 @@
+<?php
 
+include"../config.php";
+
+if(!empty($_SESSION["peut_se_connecter"])){
+  header("location:admin.php");
+  exit;
+}
+
+ ?>
 <html lang="en" dir="ltr">
   <head>
     <head>

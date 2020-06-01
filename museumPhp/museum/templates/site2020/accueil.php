@@ -14,6 +14,11 @@
              </div>
      </div>
 
+     <?php
+          echo nl2br(file_get_contents(__DIR__ . "/../admin/inscription.txt"));
+          echo __DIR__ . "/..admin/inscription/txt";
+      ?>
+
 
 
 
