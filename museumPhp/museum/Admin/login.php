@@ -62,6 +62,29 @@ if(!empty($_SESSION["peut_se_connecter"])){
 
                         <!-- Login Form -->
                         <form method="post" action="verifier_login.php"> <!-- c'est cette ligne qui est important avec action pour voir les réponses  -->
+
+                        <?php if(!empty($_GET['err']) && $_GET['err'] == 'champ'){
+                            echo "<div clas=\"error \">";
+                            echo "merci de vérifier";
+                            echo "</div>";
+                          }
+                          function addClassErreurChamp($champVide){
+                            if(!empty($_SESSION['problemechamp']) && $_SESSION ['problemechamp']== $champVide){
+                              echo"erreurchamp";
+                            }
+                          }
+
+                            //erreur dans le champ
+                            if(!empty($_GET['err']) && $_GET['err'] == 'identification'){
+                                echo "<div clas=\"error \">";
+                                echo "merci de vérifier vos id et mdp";
+                                echo "</div>";
+                                unset($_SESSION['err']);
+                              }
+
+
+                          ?>
+
                           <input type="text" id="login" class="fadeIn second" name="identifiant" placeholder="login"> <!-- c'est le name qui est important pour le fichier verigier login -->
                           <input type="password" id="password" class="fadeIn third" name="mdp" placeholder="password">
                           <input type="submit" class="fadeIn fourth" value="Log In">
