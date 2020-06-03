@@ -19,7 +19,7 @@
 
 </div>
 
-
+SELECT * FROM livres
 <?php
 
 
@@ -36,4 +36,5 @@ var_dump($prenomHasard);
 
 ?>
 
-<!-- devoir: bdd chaussures et tunnel de paiement : resume du panier avec prix, infos a donner, de facturation, mode de livraison et paiement   -->
+<!-- devoir: bdd avec produitsé/ catégories de produits/ clients/ commandes chaussures et
+tunnel de paiement : resume du panier avec prix, infos a donner, de facturation, mode de livraison et paiement   -->
