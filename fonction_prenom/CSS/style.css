@@ -1,0 +1,44 @@
+body{
+  background-color: #00ff1a7d;
+}
+
+.my_button {
+    background-color: #1056e4;
+    border-radius: 20px;
+    width: 800px;
+    height: 100px;
+    font-family: Courier;
+    font-size: 2em;
+  }
+
+form{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.descodeuse {
+    font-family: Courier;
+    font-size: 4em;
+    color: #ff2f00;
+    text-align: center;
+    margin: 20px;
+  }
+
+span{
+  text-decoration: blink;
+  font-weight: bold;
+  font-family: fantasy;
+}
+
+img{
+  display: inline;
+  box-shadow: -webkit-box-shadow: 10px -5px 5px 0px rgba(181,38,181,0.68);
+-moz-box-shadow: 10px -5px 5px 0px rgba(181,38,181,0.68);
+box-shadow: 10px -5px 5px 0px rgba(181,38,181,0.68);
+  border: 2px solid pink;
+  text-align: center;
+  margin-left: 600px;
+  height: 150px;
+  width: auto;
+  margin-top: 50px;
+}
