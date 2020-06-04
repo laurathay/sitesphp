@@ -37,6 +37,11 @@
             ?>
             </textarea>
 
+            <div class="resultat_mon_texte">
+
+
+            </div>
+
             <hr>
 
             Fichier à envoyer : <input name="mon_fichier" type="file" />

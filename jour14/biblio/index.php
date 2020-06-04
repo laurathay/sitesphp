@@ -12,6 +12,7 @@ $mdp = "root";
 $nomBaseDeDonnes = "bibliotheque";
 $bdd = new PDO("mysql:host=$serveur;dbname=$nomBaseDeDonnes" , $utilisateur, $mdp);
 
+
 $rep = $bdd->query("select * from livre");
 $result_livres = $rep -> fetchAll();
 

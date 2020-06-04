@@ -68,6 +68,7 @@ if(!empty($_SESSION["peut_se_connecter"])){
                             echo "merci de vérifier";
                             echo "</div>";
                           }
+                          
                           function addClassErreurChamp($champVide){
                             if(!empty($_SESSION['problemechamp']) && $_SESSION ['problemechamp']== $champVide){
                               echo"erreurchamp";
