@@ -12,6 +12,11 @@ $mdp = "root";
 $nomBaseDeDonnes = "bibliotheque";
 $bdd = new PDO("mysql:host=$serveur;dbname=$nomBaseDeDonnes" , $utilisateur, $mdp);
 
+if(empty($_GET["lien_livre"])){
+  header("location:index.php");
+  exit;
+}
+
 $rep = $bdd->query("select * from livre where id_livre = " . $_GET["lien_livre"]); //on fait appelle a la bdd pour selectionner uniquement les livres qui ont l'id 1
 //$result_livres = $rep->fetchAll();  //retourne tous les resultats
 $result_livres = $rep->fetch();
