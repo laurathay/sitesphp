@@ -1,8 +1,9 @@
 <?php
- # include "config_database.php";
+  include "config_database.php";
 
 if (!empty($_POST["ma_requete"])) {
     $requeteUtilisateur = $bdd->query($_POST["ma_requete"]);
+    $erreurRequeteUtilisateur = $bdd -> errorInfo();  //renvoi si erreur ou non dans un tableau
 }
 
 $nbColonnes = 2;
@@ -31,7 +32,6 @@ $nbColonnes = 2;
 </div>
 
 
-<?php  exit ?>
 
 
 <div class="txt-center p">
@@ -83,9 +83,9 @@ $nbColonnes = 2;
         $result = $requeteUtilisateur->fetchAll(PDO::FETCH_ASSOC);
         showInTable($result);
     } else {
-        if(isset($bdd -> errorInfo()[2])) {
+        if(isset($erreurRequeteUtilisateur[2])) {
             echo "<div class='error'>";
-            echo $bdd->errorInfo()[2];
+            echo $erreurRequeteUtilisateur[2];
             echo "</div>";
         }
     }

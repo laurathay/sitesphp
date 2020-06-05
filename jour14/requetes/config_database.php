@@ -2,7 +2,7 @@
 
 $serveur = 'localhost';
 $utilisateur = 'root';
-$motdepasse = '';
+$motdepasse = 'root';
 $nomBaseDeDonnees = "formation_bibliotheque";
 
 
