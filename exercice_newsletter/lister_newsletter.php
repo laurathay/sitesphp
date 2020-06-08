@@ -1,12 +1,34 @@
 <?php
+include "config.php";
 
-$inscriptions = array[
-    "nom" => "thay <button> Modifier </button> <button> Effacer </button>",
-    "prenom" => "thay <button> Modifier </button> <button> Effacer </button>",
-    "email" => "thay@gmail.com <button> Modifier </button> <button> Effacer </button>",
-];
+var_dump($_SESSION);
+
+
+///////////////: la requete
+
+// $inscriptions = array[
+//     "nom" => "thay <button> Modifier </button> <button> Effacer </button>",
+//     "prenom" => "thay <button> Modifier </button> <button> Effacer </button>",
+//     "email" => "thay@gmail.com <button> Modifier </button> <button> Effacer </button>",
+// ];
 var_dump($inscriptions);
 
+echo'<table style="border:5px pink solid;">';
+echo'<tr><td>numero</td><td>prenom</td><td>email</td><td>modifier</td><td>supprimer</td></tr>';
+
+foreach ($ajout_inscription as $key => $inscription){
+
+  echo "<tr style='border: 1px solid pink; padding:10px 20px; text-align:center;'>";
+    echo"<td>$inscription[nom]</td>";
+    echo"<td>$inscription[prenom]</td>";
+    echo"<td>$inscription[email]</td>";
+
+    echo "<td><a href=\"modify.php?url_inscript_modify=$inscript[id_inscription]\">modifier</a></td>";
+    echo "<td><a href=\"modify.php?url_inscript_modify=$inscript[id_inscription]\" onclick=\"return confirm('Voulez-vous effacer cet abonné ?') \"> supprimer </a></td>";
+    echo"</tr>";
+}
+
+echo'</table>';
 /*
  *
  *

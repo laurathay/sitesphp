@@ -7,9 +7,15 @@
         exit;
     }
 
-// 1 / Vérifier que la personne a bien rempli le champ email. 
+// 1 / Vérifier que la personne a bien rempli le champ email.
 // Si le champ email est correcte (c'est à dire qu'il est rempli et qu'il s'agit d'un email), on l'enregistre.
 // Dans le cas contraire, on retourne sur le formulaire en mettant un message d'erreur.
+if(false !== filter_var($_POST["femail"], FILTER_VALIDATE_EMAIL)){
+  $_SESSION["erreur_mail"] = FALSE;
+} else{
+  $_SESSION[erreur_mail] = TRUE;
+  header("location:formulaire.php");
+}
 
 // 2 / dans la page "lister_newsletter.php", lister dans un tableau l'ensemble des inscriptions. (une colonne nom, prénom et email)
 
@@ -53,7 +59,7 @@
                             echo "merci de vérifier";
                             echo "</div>";
                           }
-                          
+
                           function addClassErreurChamp($champVide){
                             if(!empty($_SESSION['problemechamp']) && $_SESSION ['problemechamp']== $champVide){
                               echo"erreurchamp";
@@ -73,7 +79,7 @@
 
     <input type="text" placeholder="Nom" name="fnom">
     <input type="text" placeholder="Prénom" name="fprenom">
-    <input type="text" placeholder="Email" name="femail">
+    <input type="email" placeholder="Email" name="femail">
     <br><br>
     <input type="submit">
 </form>
