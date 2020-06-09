@@ -5,12 +5,12 @@ include "../../config.php";
 
 proteger_page(); // on ne peut pas acceder à la page sans être connecté.
 
-if(!empty($_POST)) {
+if(!empty($_POST)) { //si on a cliqué sur validé
     //
     // on construit la requête
     //
 
-    if($_POST["id_menu"] == 0) {
+    if($_POST["id_menu"] == 0) { // 0 dans hidden 
         // je n'envoie pas d'ID donc je dois ajouter un nouveau menu
 
         // on aurait pu faire comme ça mais l'écriture est difficile à comprendre et moins sécurisé.
@@ -31,12 +31,12 @@ if(!empty($_POST)) {
 
     } else {
         // un id est envoyé alors je modifie un enregistrement.
-        $query = $bdd -> prepare ("UPDATE menu SET 
+        $query = $bdd -> prepare ("UPDATE menu SET
                                             nom = :nom,
                                             titre = :titre,
-                                            entree = :entree, 
-                                            plat = :plat, 
-                                            dessert = :dessert, 
+                                            entree = :entree,
+                                            plat = :plat,
+                                            dessert = :dessert,
                                             ordre = :ordre
                                             WHERE id_menu = :idMenu");
 
@@ -63,4 +63,3 @@ if(!empty($_FILES)) {
 
 
 changeDePage(RESTO_URL_SITE . "admin/menu/menu_lister.php");
-

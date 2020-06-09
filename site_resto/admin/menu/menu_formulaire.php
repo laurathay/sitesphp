@@ -6,12 +6,12 @@ proteger_page(); // fonction qui permet de verifier si nous nous sommes préalab
 
 
 
-if(!empty($_GET["menuAAfficher"])) {
+if(!empty($_GET["menuAAfficher"])) { //si ya un parametre d'URL
     // si j'ai un paramètre d'URL, c'est que je modifie
     // un enregistrement déjà existant.
     $menuAModifier = $bdd -> query("SELECT * from menu where id_menu = " . $_GET["menuAAfficher"]) -> fetch();
 } else {
-    $menuAModifier = [];
+    $menuAModifier = []; //dans ma variable je mets un tableau vide
 }
 ?>
 
@@ -27,10 +27,10 @@ if(!empty($_GET["menuAAfficher"])) {
         <form enctype="multipart/form-data" action="menu_formulaire_reponse.php" method="post">
 
             <input type="hidden" name="id_menu" value="<?php echoKey($menuAModifier, "id_menu", 0)  ?>">
-
+                                                          <!-- affiche valeur defaut: 0 si la cle idmenu nexiste pas  -->
             <div class="field">
                 Nom : <input name="nom" placeholder="Nom" type="text" value="<?php echoKey($menuAModifier, "nom")  ?>">
-            </div>
+            </div>                                                                <!-- formulaire plus simple avec echoKey -->
 
             <div class="field">
                 Titre : <input name="titre" placeholder="Titre" type="text" value="<?php echoKey($menuAModifier, "titre")  ?>">
