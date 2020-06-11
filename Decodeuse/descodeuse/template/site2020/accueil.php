@@ -1,45 +1,7 @@
 <?php include "include/head.php" ?>
 
   <main>
-        <!-- <div class="container">
-            <h1><?php echo MontrerValeur("TITRE_ACCUEIL")?></h1>
-            <div class="row">
-                <div class="col-6">
-                    <div class="pr-20 texte">
-                        <?php echo nl2br(MontrerValeur("TEXTE_ACCUEIL"))?>
-                    </div>
-                </div>
-                <div class="col-6">
-                   <?php echo html_image("image/vrac/accueil.jpg")?>
-                </div>
 
-            </div>
-        <div> -->
-          <!------------------------------------------------------------------------------------------------>
-          <!-------------------------------- gallery voyages ------------------------------------------------------>
-          <!------------------------------------------------------------------------------------------------>
-          <div id="div3">
-
-            <div class="container-studio">
-              <header>
-              Header
-            </header>
-            <aside>
-              Blog
-            </aside>
-            <section>
-              Section
-            </section>
-            <aside>
-              Food
-            </aside>
-            <footer>
-              Insight preview
-            </footer>
-            </div>
-
-          </div>
-          
                 <h1>The ThayThay Times</h1>
                 <aside>
                     <div>

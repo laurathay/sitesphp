@@ -15,7 +15,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <title> Thay Thay </title>
-    <link rel="stylesheet" href="<?php echo URL_TEMPLATE ?>css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
   </head>
   <body>
@@ -23,9 +23,26 @@
 
     <!-- barre de navigation -->
 
+    <div id="div3">
 
-        <a href="index.html"> About </a>
+      <div class="container-studio">
+        <header>
+          <a href="index.html"> About </a>
+      </header>
+      <aside>
         <a href="project.html"> Projects</a>
+      </aside>
+      <section>
+        Section
+      </section>
+      <aside>
         <a href="contact.html"> Contact </a>
+      </aside>
+      <footer>
+        Insight Decodeuses
+      </footer>
+      </div>
+
+    </div>
 
     </header>
