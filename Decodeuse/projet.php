@@ -1,6 +1,6 @@
 <?php
 include "config.php";
 
-$projet_a_afficher = unProjet($_GET["menuAAfficher"]);
+$projet_a_afficher = unProjet($_GET["projetAAfficher"]);
 
 include PATH_TEMPLATE . "page_projet_du_jour.php";

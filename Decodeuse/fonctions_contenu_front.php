@@ -1,7 +1,7 @@
 <?php
 
 
-function tousLesMenus () {
+function tousLesProjets () {
     // retourne tous les menus
     global $bdd;
     return $bdd -> query("select * from menu order by ordre") -> fetchAll(PDO::FETCH_ASSOC);
@@ -18,4 +18,3 @@ function unMenu ($idMenu) {
     return $query -> fetch(PDO::FETCH_ASSOC); // on utilise fetch et non fetchAll car nous souhaitons retourner un seul résultat.
 
 }
-

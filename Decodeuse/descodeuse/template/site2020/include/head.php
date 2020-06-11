@@ -14,35 +14,37 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <title> Thay Thay </title>
+    <title> Projects PHP Portfolio </title>
     <link rel="stylesheet" href="css/style.css">
 
   </head>
   <body>
     <header>
 
-    <!-- barre de navigation -->
+      <!-- barre de navigation -->
 
-    <div id="div3">
+      <div id="div3">
 
-      <div class="container-studio">
-        <header>
-          <a href="index.html"> About </a>
-      </header>
-      <aside>
-        <a href="project.html"> Projects</a>
-      </aside>
-      <section>
-        Section
-      </section>
-      <aside>
-        <a href="contact.html"> Contact </a>
-      </aside>
-      <footer>
-        Insight Decodeuses
-      </footer>
+        <div class="container-studio">
+
+          <div class="about">
+            <a href="index.php"> About </a>
+        </div>
+        <div class="project">
+          <a href="projet.php"> Projects</a>
+        </div>
+        <div class="section">
+          Section
+        </div>
+        <div class="project">
+          <a href="contact.php"> Contact </a>
+        </div>
+        <div class="bas">
+           Insights projects
+        </div>
+
+        </div>
+
       </div>
-
-    </div>
 
     </header>

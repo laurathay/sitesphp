@@ -1,12 +1,11 @@
 <?php include "include/head.php" ?>
 
   <main>
-
-                <h1>The ThayThay Times</h1>
+<hr>
                 <aside>
                     <div>
                         <div class="issue">Issue #1 </div>
-                        <div class="date">Tuesday, 26 May, 2020</div>
+                        <div class="date"><?php echo date("F j, Y");?></div>
                         <div class="edition">Two memes Edition</div>
                     </div>
                 </aside>

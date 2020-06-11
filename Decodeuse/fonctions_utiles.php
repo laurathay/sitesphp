@@ -39,7 +39,7 @@ function proteger_page() {
         // et on ajoute un message d'erreur.
         if(empty($_SESSION["connected_user"])) {
             // je ne suis pas connecté.
-            changeDePage(RESTO_URL_SITE . "admin/connexion.php");
+            changeDePage(PROJET_URL_SITE . "admin/connexion.php");
         }
 }
 
@@ -120,7 +120,7 @@ function enregistrerFichier($fichier, $destination) {
 
                 verifierCheminFichier($destination);
 
-                move_uploaded_file($fichier["tmp_name"], RESTO_PATH_SITE . $destination);
+                move_uploaded_file($fichier["tmp_name"], PROJET_PATH_SITE . $destination);
 
             }
         } else {
@@ -136,7 +136,7 @@ function verifierCheminFichier($chemin) {
     //
         $arrChemin = explode("/", $chemin);
 
-        $verifChemin = RESTO_PATH_SITE;
+        $verifChemin = PROJET_PATH_SITE;
         foreach ($arrChemin as $dossier) {
             if(!strstr($dossier, ".")) {
                 // si il n'y a pas de point dans le nom du dossier, c'est qu'il s'agit d'un dossier
@@ -165,8 +165,8 @@ function echoKey($tableau, $cle, $valeurDefaut = "") {
 function html_image($urlImage, $classHtml = "") {
         // on affiche le tag vers l'image seulement si l'image existe.
 
-        if(is_file(RESTO_PATH_SITE .$urlImage)) {
-            return "<img src='".RESTO_URL_SITE."/$urlImage' class='$classHtml'>";
+        if(is_file(PROJET_PATH_SITE .$urlImage)) {
+            return "<img src='".PROJET_URL_SITE."/$urlImage' class='$classHtml'>";
         }
         return "";
 }

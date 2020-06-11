@@ -1,11 +1,14 @@
+/*--------------------------------------*/
+/*----------- partie head --------------*/
+/*--------------------------------------*/
 .container-studio {
   -ms-display: grid;
   display: grid;
   grid-gap: 15px; /* Shortcut pour grid-row-gap grid-column-cap */
   grid-template-areas:
-  "header header header"
+  "about about about"
   "test section aside-2"
-  "footer footer footer";
+  "bas bas bas";
 }
 
 /* All Grid Items */
@@ -14,25 +17,25 @@
   font-size: 80px;
   padding: 10px;
 }
-header {
+.about {
   /* Associer chaque élément du dom à un endroit dans la grille */
-  grid-area: header;
+  grid-area: about;
 }
 
-aside:nth-of-type(1) {
+.project:nth-of-type(1) {
   grid-area: test;
 }
 
-section {
+.section {
   grid-area: section;
 }
 
-aside:nth-of-type(2) {
+.project:nth-of-type(2) {
   grid-area: aside-2;
 }
 
-footer {
-  grid-area: footer;
+.bas {
+  grid-area: bas;
 }
 
 
@@ -41,6 +44,10 @@ footer {
 
 
 
+
+/*--------------------------------------*/
+/*----------- partie main --------------*/
+/*--------------------------------------*/
 
 
 
@@ -636,4 +643,22 @@ aside > div > div {
 .hogwarts:hover .hogwarts__title {
   background: transparent;
   color: var(--black);
+}
+
+/*--------------------------------------*/
+/*----------- partie footer --------------*/
+/*--------------------------------------*/
+
+
+.emoticones li {
+  list-style: none;
+  display:inline-grid;
+  justify-content: space-around;
+  text-decoration: none;
+  font-size: 0.5em;
+  margin-left: 3em;
+}
+
+footer a{
+  font-family: 'Quicksand', sans-serif;
 }
