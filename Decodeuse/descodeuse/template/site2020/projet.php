@@ -12,18 +12,18 @@
             <div class="col-6">
 
 
-                <h2>Entrée</h2>
-                <?php echo $projet_a_afficher["entree"]?>
+                <h2> Aperçu </h2>
+                <?php echo $projet_a_afficher["tech"]?>
 
-                <h2>Plat</h2>
-                <?php echo $projet_a_afficher["plat"]?>
+                <h2> Texte </h2>
+                <?php echo $projet_a_afficher["texte"]?>
 
-                <h2>Dessert</h2>
-                <?php echo $projet_a_afficher["dessert"]?>
+                <h2> Date </h2>
+                <?php echo $projet_a_afficher["date"]?>
             </div>
 
             <div class="col-6">
-                <?php echo html_image("image/menu/$_GET[menuAAfficher].jpg");?>
+                <?php echo html_image("images/projet/$_GET[projetAAfficher].jpg");?>
 
             </div>
 

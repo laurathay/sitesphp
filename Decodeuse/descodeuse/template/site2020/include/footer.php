@@ -1,4 +1,5 @@
 <footer>
+  <hr>
 
   <div id="div3">
 
@@ -34,9 +35,10 @@
     </div>
 
   </div>
+  <hr>
 
 
-  &copy; <?php echo NOM_DU_PROJET ?>
+  &copy; <?php echo ('NOM_DU_PROJET') ?>
     2014 - <?php echo date("Y") ?>
 </footer>
 
