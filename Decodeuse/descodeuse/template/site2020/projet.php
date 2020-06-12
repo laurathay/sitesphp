@@ -6,7 +6,7 @@
   <main>
     <div class="container">
         <h1>
-            <?php echo $projet_a_afficher["titre"]?>
+            <?php echo $projet_a_afficher["titre"]?> <!-- comment faire le lien avec bdd?  -->
         </h1>
         <div class="row">
             <div class="col-6">
