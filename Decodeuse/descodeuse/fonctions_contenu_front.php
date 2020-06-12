@@ -4,7 +4,7 @@
 function tousLesProjets () {
     // retourne tous les menus
     global $bdd;
-    return $bdd -> query("select * from menu order by ordre") -> fetchAll(PDO::FETCH_ASSOC);
+    return $bdd -> query("select * from projet order by ordre") -> fetchAll(PDO::FETCH_ASSOC);
 }
 
 function unProjet ($idProjet) {

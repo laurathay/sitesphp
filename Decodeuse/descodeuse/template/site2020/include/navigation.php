@@ -1,3 +1,17 @@
+<nav>
+    <ul>
+      <li>
+            <a href="<?php echo PROJET_URL_SITE ?>">Accueil</a>
+      </li>
+        <?php foreach( tousLesProjets() as $projet ) {
+            echo "<li>";
+            echo html_a($projet["nom"], PROJET_URL_SITE . "projet.php?projetAAfficher=$projet[id_projet]");
+            echo "</li>";
+        }
+        ?>
+
+    </ul>
+</nav>
 <!-- barre de navigation -->
 
 <div id="div3">
