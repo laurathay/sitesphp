@@ -6,7 +6,7 @@ session_start();
 
 $serveur = 'localhost';
 $utilisateur = 'root';
-$motdepasse = 'root'; //toujours changer le mdp 
+$motdepasse = ''; //toujours changer le mdp 
 $nomBaseDeDonnees = "formation_restaurant";
 
 

@@ -1,3 +1,37 @@
+/* divs */
+
+body {
+  font-family: sans-serif;
+}
+
+/* Titles */
+
+h1, h2 {
+  text-align: center;
+}
+
+/* Tableaux */
+
+th {
+  background-color: gold;
+  height: 9vh;
+  width: 33vw;
+}
+
+td {
+  background-color: rgb(240, 240, 240);
+  height: 6vh;
+  text-align: center;
+  width: 33vw;
+}
+
+/* Champs erreur / success */
+
+.error {
+  background-color: gold;
+  padding: 1rem;
+}
+
 .err {
     color: darkred;
     border: darkred 1px solid;
@@ -13,7 +47,12 @@
     margin-bottom: 2em;
 }
 
-input[type=text]{
+input[type=text], [type=email]{
     padding: 1em;
 }
 
+/* buttons */
+
+button {
+  margin: 0rem;
+}
