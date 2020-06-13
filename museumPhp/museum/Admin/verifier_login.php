@@ -1,8 +1,7 @@
 <?php
 session_start();
 var_dump($_POST);
-//login Descodeuse
-// mdp PHP2020
+
 
 
 //on verifie qu'il n'y ait pas derreur
