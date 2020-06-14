@@ -1,6 +1,6 @@
 <?php
 
-include"../config.php";
+include "../config.php";
 
 if(!empty($_SESSION["peut_se_connecter"])){
   header("location:accueil.php");

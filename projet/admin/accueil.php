@@ -1,44 +1,34 @@
 
 <?php
-  require"../config.php";
+include "../config.php";
+include "include/entete.php";
 
-/*  verif_connexion(); *///pour sécuriser la page et include dans confi.php
+proteger_page(); // fonction qui permet de verifier si nous nous sommes préalablement connecté.
 
- ?>
+?>
 
+<h1>Bienvenue dans votre espace administration</h1>
 
-<h1> Bienvenue sur la page admin </h1>
+<?php
+show_error();
+show_success();
+?>
 
-  <h3>Formulaire</h3>
-        Pour envoyer un fichier via le formulaire, nous devons construire le formualaire avec un encodage
-        particulier : <em>enctype="multipart/form-data"</em>
+<div class="intro">
+    Ici vous allez pouvoir modifier le contenu de votre site internet.<br/>
 
-        <a id="form1"></a>
-        <form method="post" action="admin_reponse.php" enctype="multipart/form-data"> <!-- se renvoyer a soi meme mais on a changé a admin _reponse-->
-
-
-            Champ de type texte :
-            <input name="mon_fichier" id="mon_fichier" type="text"> <!--c'est ce name qu'on reprend plus tard -->
-            <textarea name="montexte" type="text" rows="10" cols = "33" class="textearea" ><?php
-
-          //  echo file_get_contents(__DIR__ . "/inscription.txt");
-
-            ?>
-            </textarea>
-
-            <div class="resultat_mon_texte">
+    <div class="menu_accueil">
+        <a href="<?php echo PROJET_URL_SITE ?>" target="_blank">Voir le site</a>
+        <a href="<?php echo PROJET_URL_SITE ?>admin/accueil/formulaire_accueil.php">Modifier ma page d'accueil</a>
+        <a href="<?php echo PROJET_URL_SITE ?>admin/menu/menu_lister.php">Ajouter, modifier ou supprimer un menu</a>
+        <a href="#">Ajouter, modifier ou supprimer un utilisateur</a>
+        <a href="deconnexion.php">Se déconnecter</a>
+    </div>
 
 
-            </div>
 
-            <hr>
+</div>
 
-            Fichier à envoyer : <input name="mon_fichier" type="file" />
+<?php
 
-            <hr>
-
-            <button type="submit">Envoyer</button>
-
-            <a href="deconnexion.php"> Deconnexion </a>
-
-        </form>
+include "include/footer.php";

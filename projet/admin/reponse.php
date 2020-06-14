@@ -3,7 +3,7 @@ session_start();
 /*var_dump($_POST);*/
 
 //on verifie qu'il n'y ait pas derreur
-$nomChampsObligatoires = array("login", "mdp");
+$nomChampsObligatoires = array("identifiant", "mdp");
 
 foreach ($nomChampsObligatoires as $nomChamp) {
   if(empty($_POST[$nomChamp])){
