@@ -87,7 +87,7 @@ if(!empty($_SESSION["peut_se_connecter"])){
 
                           ?>
 
-                          <input type="text" id="login" class="fadeIn second" name="identifiant" placeholder="login"> <!-- c'est le name qui est important pour le fichier verigier login -->
+                          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login"> <!-- c'est le name qui est important pour le fichier verigier login -->
                           <input type="password" id="password" class="fadeIn third" name="mdp" placeholder="password">
                           <input type="submit" class="fadeIn fourth" value="Log In">
                         </form>

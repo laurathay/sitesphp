@@ -37,7 +37,8 @@ function proteger_page() {
         // fonction qui permet de vérifier que la variable $_SESSION["connected_user"] existe
         // si c'est le cas, nous sommes connecté sinon, on retourne à l'accueil
         // et on ajoute un message d'erreur.
-        if(empty($_SESSION["connected_user"])) {
+        var_dump($_SESSION);
+        if(empty($_SESSION["peut_se_connecter"])) {
             // je ne suis pas connecté.
             changeDePage(PROJET_URL_SITE . "admin/connexion.php");
         }
