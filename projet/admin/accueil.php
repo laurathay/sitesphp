@@ -1,5 +1,6 @@
 
 <?php
+
 include "../config.php";
 include "include/entete.php";
 
@@ -32,31 +33,31 @@ show_success();
                 			  <span>h</span>
                 			  <span>a</span>
                 			  <span>y</span>
-                			  <span>T</span>
-                			  <span>h</span>
-                			  <span>a</span>
-                				<span>y</span>
-                				<span>A</span>
-                				<span>b</span>
-                				<span>o</span>
-                				<span>r</span>
-                				<span>a</span>
-                        <span>d</span>
+                			  <span>D</span>
+                			  <span>E</span>
+                			  <span>S</span>
+                				<span>C</span>
+                				<span>O</span>
+                				<span>D</span>
+                				<span>U</span>
+                				<span>E</span>
+                				<span>S</span>
+                        <span>E</span>
 
                 			</h1>
                 		  <nav role="navigation" class="main-menu">
                 				<ul class="menu">
-                          <li><a href="<?php echo PROJET_URL_SITE ?>" target="_blank">Voir le site</a></li>
-                          <li><a href="<?php echo PROJET_URL_SITE ?>admin/accueil/formulaire_accueil.php">Modifier ma page d'accueil</a></li>
-                          <li><a href="<?php echo PROJET_URL_SITE ?>admin/menu/menu_lister.php">Ajouter, modifier ou supprimer un menu</a></li>
-                          <li><a href="#">Ajouter, modifier ou supprimer un utilisateur</a></li>
-                          <li><a href="deconnexion.php">Se déconnecter</a></li>
-                          <li><a href="studio.html"> Projet </a></li>
-                          <li><a href="contact.html"> Contact </a></li>
+                          <li><a href="<?php echo PROJET_URL_SITE ?>index.php">Voir le site</a></li> <br>
+                          <li><a href="<?php echo PROJET_URL_SITE ?>admin/accueil_form/formulaire_accueil.php">Modifier </a></li> <br>
+                          <li><a href="<?php echo PROJET_URL_SITE ?>admin/projet_form/projet_form_list.php">Ajouter </a></li> <br>
+                          <li><a href="<?php echo PROJET_URL_SITE ?>admin/projet_form/projet_form_delete.php"> Supprimer </a></li> <br>
+                          <li><a href="/projet/admin/deconnexion.php">Se déconnecter</a></li> <br>
+                          <li><a href="projet.php"> Projet </a></li> <br>
+                          <li><a href="contact.php"> Contact </a></li> <br>
                 				</ul>
                 			</nav>
                 			<div class="red-box"></div>
-                			<img src="Assets/images/studio-img.jpg" alt="roze">
+                			<img src="images/flamingo.jpg" alt="flamingo">
                 		</header>
 
 

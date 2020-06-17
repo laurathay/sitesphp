@@ -1,5 +1,6 @@
 <?php
 include "../../config.php";
+include "../accueil.php";
 include "../include/entete.php";
 
 proteger_page(); // fonction qui permet de verifier si nous nous sommes préalablement connecté.
@@ -13,6 +14,7 @@ show_error();
 show_success();
 ?>
 
+
     <div class="form">
         <!-- Le type d'encodage des données, enctype, DOIT être spécifié comme ce qui suit -->
         <form enctype="multipart/form-data" action="formulaire_accueil_reponse.php" method="post">
@@ -20,7 +22,18 @@ show_success();
             <input type="text" name="titre" value="<?php echo montrerValeur("TITRE_ACCUEIL")?>" placeholder="Titre de la page" />
             </div>
 
-            <textarea name="texteAccueil"><?php echo montrerValeur("TEXTE_ACCUEIL")?></textarea>
+            <div class="custom-select" style="width:400px;">
+              <select>
+                <option value="0">Select tech:</option>
+                <option value="1"> HTML </option>
+                <option value="2"> CSS </option>
+                <option value="3"> Java Script </option>
+                <option value="4"> PHP </option>
+
+              </select>
+            </div>
+
+            <textarea name="texteAccueil" rows="10" cols="33"><?php echo montrerValeur("TEXTE_ACCUEIL")?></textarea>
 
             <!--
             MAX_FILE_SIZE doit précéder le champ input de type file. Il dit la taille maximum du fichier que l'on peut envoyer
@@ -35,7 +48,7 @@ show_success();
             Image de la page d'accueil : <input name="imageAccueil" type="file"  accept="image/jpeg" />
 
             <input type="submit" value="Envoyer" />
-            <a href="<?php echo RESTO_URL_SITE ?>admin/accueil.php" class="button">Annuler</a>
+            <a href="<?php echo PROJET_URL_SITE ?>admin/accueil.php" class="button">Annuler</a>
         </form>
 
     </div>

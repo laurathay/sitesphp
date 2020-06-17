@@ -13,10 +13,9 @@ enregistreValeur("TEXTE_ACCUEIL", $_POST["texteAccueil"]);
 }
 
 if(!empty($_FILES)) {
-    enregistrerFichier($_FILES["imageAccueil"],  "image/vrac/accueil.jpg");
+    enregistrerFichier($_FILES["imageAccueil"],  "images/vrac/accueil.jpg");
 }
 
 ajouterSuccess("Nous avons enregistré la page d'accueil");
 
 changeDePage(PROJET_URL_SITE . "admin/accueil.php");
-
