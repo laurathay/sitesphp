@@ -19,20 +19,23 @@ show_success();
         <!-- Le type d'encodage des données, enctype, DOIT être spécifié comme ce qui suit -->
         <form enctype="multipart/form-data" action="formulaire_accueil_reponse.php" method="post">
             <div class="field">
-            <input type="text" name="titre" value="<?php echo montrerValeur("TITRE_ACCUEIL")?>" placeholder="Titre de la page" />
+            <input type="text" name="titre" value="<?php echo montrerValeur("TITRE_ACCUEIL")?>" placeholder="Titre du projet" />
             </div>
 
-            <div class="custom-select" style="width:400px;">
+            <hr>
+
+            <div class="custom-select" style="width:200px;">
               <select>
                 <option value="0">Select tech:</option>
                 <option value="1"> HTML </option>
                 <option value="2"> CSS </option>
                 <option value="3"> Java Script </option>
                 <option value="4"> PHP </option>
-
               </select>
             </div>
 
+            <hr>
+            
             <textarea name="texteAccueil" rows="10" cols="33"><?php echo montrerValeur("TEXTE_ACCUEIL")?></textarea>
 
             <!--
