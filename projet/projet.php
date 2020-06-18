@@ -6,7 +6,7 @@ include "template/include/head.php";
 
 ?>
 <body>
-        <h1> Pojet </h1>
+        <h1> Projet </h1>
 
         <img src="" alt="">
         <p>

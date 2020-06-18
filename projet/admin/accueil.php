@@ -56,7 +56,7 @@ show_success();
                 				</ul>
                 			</nav>
                 			<div class="red-box"></div>
-                			<img src="images/flamingo.jpg" alt="flamingo">
+                			<img src="http://localhost:8888/projet/admin/images/flamingo.jpg" alt="flamingo">
                 		</header>
 
 
