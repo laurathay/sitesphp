@@ -4,7 +4,7 @@ include "fonctions_contenu_front.php";
 
 session_start();
 
-$serveur = 'localhost';
+$serveur = 'localhost:8888/';
 $utilisateur = 'root';
 $motdepasse = ''; //toujours changer le mdp 
 $nomBaseDeDonnees = "formation_restaurant";

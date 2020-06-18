@@ -8,6 +8,7 @@ include "template/include/head.php";
 <div class="cards">
 
 	<div class="contact">Contact Me</div>
+	<a href="mailto:laura.thay@ipag.fr">laura.thay@ipag.fr</a>
 	<div class="contact-form">
 		<a href="#" class="close"><i class="fa fa-times"></i></a>
 		<form>
@@ -18,6 +19,7 @@ include "template/include/head.php";
 			<div class="control submit"><input type="submit" /></div>
 		</form>
 	</div>
+	<a href="#"><i class="fas fa-phone-alt"></i></a>
 
 	 <div class="card active" id="overview">
 		<a class="card-toggle"><i class="fa fa-arrow-circle-left"></i></a>

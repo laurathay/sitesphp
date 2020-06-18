@@ -71,6 +71,18 @@ show_success();
                         </div>
                       </div>
 
+                      <?php
+                      try{
+                            $pdo = new PDO("projet");
+                        } catch(Exception $e){
+                            print_r($e);
+                        }
+                        $projets = recupererListeProjets();
+                        foreach ( $projets as $line) {
+                        echo "<u>" . $line['titre'] . "</u>";
+                        }
+                      ?>
+
 <?php
 include "formulaire_accueil.php";
 

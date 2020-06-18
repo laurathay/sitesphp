@@ -60,7 +60,6 @@ function debug($var) {
 
 function enregistreProjet($titre, $texte) {
     // permet d'enregistrer une donnée dans la table simpledonnee
-var_dump("salut");
 
     global $bdd;
     // permet de récupérer la variable $bdd, même si celle-ci est à l'extérieur de ma fonction
@@ -71,15 +70,16 @@ var_dump("salut");
 
 
         // nous n'avons pas d'enregistrement, nous devons l'insérer dans la base.
-
-        $query = $bdd -> prepare("INSERT into projet (titre, texte) VALUES ( :titre, :texte )");
-        $query -> execute([":titre" => $titre, ":texte" => $texte]);
-
-        var_dump("fin");
+        $date = '2008-7-04';
+        $query = $bdd -> prepare("INSERT into projet (titre, texte, date) VALUES ( :titre, :texte, :date )");
+        $stmt = $query -> execute([":titre" => $titre, ":texte" => $texte, ":date" => $date]);
 
 
+        if (!$stmt) {
+            echo "\nPDO::errorInfo():\n";
+            print_r($query->errorInfo());
 
-
+          }
 }
 
 function MontrerValeur($iduu) {
@@ -114,7 +114,7 @@ function enregistrerFichier($fichier, $destination) {
 
                 verifierCheminFichier($destination);
 
-                move_uploaded_file($fichier["tmp_name"], RESTO_PATH_SITE . $destination);
+                move_uploaded_file($fichier["tmp_name"], PROJET_PATH_SITE . $destination);
 
             }
         } else {
@@ -122,6 +122,24 @@ function enregistrerFichier($fichier, $destination) {
 
         }
 }
+
+function recupererListeProjets() {
+
+  try{
+        $pdo = new PDO("projet");
+    } catch(Exception $e){
+        print_r($e);
+    }
+    
+        global $bdd;
+        $sth = $bdd->prepare("SELECT titre, texteAccueil, date, imageAccueil FROM projet");
+        $sth->execute();
+        /* Récupération de toutes les lignes d'un jeu de résultats */
+        print("Récupération de tous les projets :\n");
+        $result = $sth->fetchAll();
+        return $result;
+}
+
 
 function verifierCheminFichier($chemin) {
         //
