@@ -4,6 +4,7 @@
 include "../config.php";
 include "include/entete.php";
 
+
 proteger_page(); // fonction qui permet de verifier si nous nous sommes préalablement connecté.
 
 ?>
@@ -48,7 +49,7 @@ show_success();
                 		  <nav role="navigation" class="main-menu">
                 				<ul class="menu">
                           <li><a href="<?php echo PROJET_URL_SITE ?>index.php">Voir le site</a></li> <br>
-                          <li><a href="<?php echo PROJET_URL_SITE ?>admin/accueil_form/formulaire_accueil.php">Modifier </a></li> <br>
+                          <li><a href="<?php echo PROJET_URL_SITE ?>admin/formulaire_accueil.php">Modifier </a></li> <br>
                           <li><a href="<?php echo PROJET_URL_SITE ?>admin/projet_form/projet_form_list.php">Ajouter </a></li> <br>
                           <li><a href="<?php echo PROJET_URL_SITE ?>admin/projet_form/projet_form_delete.php"> Supprimer </a></li> <br>
                           <li><a href="/projet/admin/deconnexion.php">Se déconnecter</a></li> <br>
@@ -73,5 +74,6 @@ show_success();
                       </div>
 
 <?php
+include "formulaire_accueil.php";
 
 include "include/footer.php";

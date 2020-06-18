@@ -1,18 +1,8 @@
-<?php
-include "../../config.php";
-include "../accueil.php";
-include "../include/entete.php";
 
-proteger_page(); // fonction qui permet de verifier si nous nous sommes préalablement connecté.
-
-?>
 
     <h1>Modification de la page d'accueil</h1>
 
-<?php
-show_error();
-show_success();
-?>
+
 
 
     <div class="form">
@@ -22,21 +12,22 @@ show_success();
             <input type="text" name="titre" value="<?php echo montrerValeur("TITRE_ACCUEIL")?>" placeholder="Titre du projet" />
             </div>
 
-            <hr>
 
-            <div class="custom-select" style="width:200px;">
-              <select>
-                <option value="0">Select tech:</option>
-                <option value="1"> HTML </option>
-                <option value="2"> CSS </option>
-                <option value="3"> Java Script </option>
-                <option value="4"> PHP </option>
-              </select>
+            <div class="selectdiv">
+              <label>
+                  <select>
+                      <option name="techAccueil" selected> Select Tech </option>
+                      <option name="techAccueil"> HTML/CSS </option>
+                      <option name="techAccueil"> JavaScript </option>
+                      <option name="techAccueil"> PHP </option>
+                      <option name="techAccueil"> Wordpress </option>
+                      <option name="techAccueil"> Node.JS </option>
+                  </select>
+              </label>
             </div>
 
-            <hr>
-            
-            <textarea name="texteAccueil" rows="10" cols="33"><?php echo montrerValeur("TEXTE_ACCUEIL")?></textarea>
+
+            <textarea name="texteAccueil" rows="20" cols="75"><?php echo montrerValeur("TEXTE_ACCUEIL")?></textarea>
 
             <!--
             MAX_FILE_SIZE doit précéder le champ input de type file. Il dit la taille maximum du fichier que l'on peut envoyer
@@ -54,8 +45,14 @@ show_success();
             <a href="<?php echo PROJET_URL_SITE ?>admin/accueil.php" class="button">Annuler</a>
         </form>
 
+
+
+
+
+
+
+
+
+</div>
+
     </div>
-
-<?php
-
-include "../include/footer.php";

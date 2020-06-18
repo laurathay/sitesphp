@@ -1,14 +1,19 @@
 <?php
 // Cette page reçoit les informations du formulaire qui se trouve sur formulaire_accueil.php
 
-include "../../config.php";
+include "../config.php";
+var_dump($_POST);
 
 proteger_page(); // on ne peut pas acceder à la page sans être connecté.
+enregistreProjet("TITRE_ACCUEIL", $_POST['titre']);
 
-if(!empty($_POST)) {
-enregistreValeur("TITRE_ACCUEIL", $_POST["titre"]);
-enregistreValeur("TEXTE_ACCUEIL", $_POST["texteAccueil"]);
+if(isset($_POST['titre'])) {
 
+var_dump("rentre dans post");
+
+  var_dump($_POST);
+
+/*enregistreProjet("TITRE_ACCUEIL", $_POST["titre"]);*/
 
 }
 

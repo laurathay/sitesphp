@@ -58,8 +58,9 @@ function debug($var) {
         var_dump($var);
 }
 
-function enregistreValeur($iduu, $valeur) {
+function enregistreProjet($titre, $texte) {
     // permet d'enregistrer une donnée dans la table simpledonnee
+var_dump("salut");
 
     global $bdd;
     // permet de récupérer la variable $bdd, même si celle-ci est à l'extérieur de ma fonction
@@ -68,24 +69,16 @@ function enregistreValeur($iduu, $valeur) {
 
     // 1 - on verifie si la donnée existe déjà dans la table.
 
-    $nbVal = $bdd -> prepare("SELECT count(*) as nbEnregistrement from simpledonnee where iduu = :iduu");
-    $nbVal -> execute([":iduu" => $iduu]);
-    $resultNbVal =  $nbVal -> fetch(PDO::FETCH_ASSOC);
-
-
-    if($resultNbVal["nbEnregistrement"] == 0) {
 
         // nous n'avons pas d'enregistrement, nous devons l'insérer dans la base.
 
-        $query = $bdd -> prepare("INSERT into simpledonnee(iduu, valeur) VALUES ( :iduu, :valeur )");
-        $query -> execute([":iduu" => $iduu, ":valeur" => $valeur]);
+        $query = $bdd -> prepare("INSERT into projet (titre, texte) VALUES ( :titre, :texte )");
+        $query -> execute([":titre" => $titre, ":texte" => $texte]);
+
+        var_dump("fin");
 
 
-    } else {
-        // l'enregistrement existe, nous devons le mettre à jour.
-        $query = $bdd -> prepare("UPDATE simpledonnee SET valeur=:valeur WHERE iduu = :iduu");
-        $query -> execute([":iduu" => $iduu, ":valeur" => $valeur]);
-    }
+
 
 }
 
