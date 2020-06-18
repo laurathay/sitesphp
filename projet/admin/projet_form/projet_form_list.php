@@ -15,7 +15,7 @@ show_success();
 
 <div class="chapter">
   <a href="<?php echo PROJET_URL_SITE ?>admin/accueil.php">Retour à l'accueil</a>
-  <a href="<?php echo PROJET_URL_SITE ?>admin/projet/projet_form.php">Ajouter un chapitre</a>
+  <a href="<?php echo PROJET_URL_SITE ?>admin/projet_form/projet_form.php">Ajouter un Projet</a>
 </div>
 
 <div class="list">

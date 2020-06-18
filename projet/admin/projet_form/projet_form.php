@@ -1,6 +1,7 @@
 <?php
 include "../../config.php";
-include "../include/header.php";
+include "../include/entete.php";
+include "../accueil.php";
 
 proteger_page();
 if(!empty($_GET["projetAAfficher"])) {
@@ -48,7 +49,7 @@ show_success();
     ?>
     </div>
     <div>
-    Image du chapitre : <input name="imageChapitre" type="file"  accept="image/jpeg" />
+    Image du projet : <input name="imageProjet" type="file"  accept="image/jpeg" />
     </div>
     <input type="submit" value="Envoyer" />
     <a href="<?php echo PROJET_URL_SITE ?>admin/form_accueil/form.php" class="button">Annuler</a>
@@ -56,5 +57,4 @@ show_success();
 </div>
 
 <?php
-
 include "../include/footer.php";

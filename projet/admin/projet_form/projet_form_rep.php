@@ -47,4 +47,4 @@ var_dump($bdd->errorinfo());
 if(!empty($_FILES)) {
   enregistrerFichier($_FILES["imageChapitre"],  "img/vracs/$chapterID.jpg");
 }
-changeDePage(PROJET_URL_SITE . "admin/projet/projet_form_list.php");
+changeDePage(PROJET_URL_SITE . "admin/projet_form/projet_form_list.php");

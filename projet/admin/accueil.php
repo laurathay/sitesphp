@@ -49,12 +49,10 @@ show_success();
                 		  <nav role="navigation" class="main-menu">
                 				<ul class="menu">
                           <li><a href="<?php echo PROJET_URL_SITE ?>index.php">Voir le site</a></li> <br>
-                          <li><a href="<?php echo PROJET_URL_SITE ?>admin/formulaire_accueil.php">Modifier </a></li> <br>
-                          <li><a href="<?php echo PROJET_URL_SITE ?>admin/projet_form/projet_form_list.php">Ajouter </a></li> <br>
+                          <li><a href="<?php echo PROJET_URL_SITE ?>admin/projet_form/projet_form.php"> Modifier Projet </a></li> <br>
                           <li><a href="<?php echo PROJET_URL_SITE ?>admin/projet_form/projet_form_delete.php"> Supprimer </a></li> <br>
                           <li><a href="/projet/admin/deconnexion.php">Se déconnecter</a></li> <br>
-                          <li><a href="projet.php"> Projet </a></li> <br>
-                          <li><a href="contact.php"> Contact </a></li> <br>
+                          <li><a href="<?php echo PROJET_URL_SITE ?>contact.php"> Contact </a></li> <br>
                 				</ul>
                 			</nav>
                 			<div class="red-box"></div>
