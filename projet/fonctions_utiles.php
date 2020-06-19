@@ -132,15 +132,15 @@ function recupererListeProjets() {
     }
 
         global $bdd;
-        $sth = $bdd->prepare("SELECT titre, texteAccueil, date, imageAccueil FROM projet");
-        $sth->execute([
-              ":titre" => $_POST['TITRE_ACCUEIL'],
-              ":texte" =>  $_POST['texteAccueil'],
-            ]);
-        /* Récupération de toutes les lignes d'un jeu de résultats */
-        print("Récupération de tous les projets :\n");
-        $result = $sth->fetchAll();
-        echo $projets;
+        $results = $bdd-> query("SELECT * FROM projet")->fetchAll();
+        foreach ($results as $key => $projet) {
+
+            $lienModifier = html_a("Modifier", PROJET_URL_SITE . "admin/projet_form/projet_form.php?projetAAfficher=$projet[id_projet]");
+            $lienSupprimer = html_a("Supprimer", PROJET_URL_SITE . "admin/projet_form/projet_form_delete.php?projetASupprimer=$projet[id_projet]", "alert", "Effacer ce projet ?");
+            echo "<li>$projet[titre]  ( $lienModifier | $lienSupprimer)</li>";
+            echo "<li>$projet[texte]  ( $lienModifier | $lienSupprimer)</li>";
+
+        }
 }
 
 

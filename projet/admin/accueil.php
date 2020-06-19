@@ -3,6 +3,7 @@
 
 include "../config.php";
 include "include/entete.php";
+include "../fonctions_utiles.php";
 
 
 proteger_page(); // fonction qui permet de verifier si nous nous sommes préalablement connecté.
@@ -82,13 +83,7 @@ show_success();
                         echo "<u>" . $line['titre'] . "</u>";
                       } */
                       echo "<ul>";
-                      $projets = recupererListeProjets();
-                    foreach($projets as $projet) {
-                      $lienModifier = html_a("Modifier", PROJET_URL_SITE . "admin/projet_form/projet_form.php?projetAAfficher=$result[id_projet]");
-                      $lienSupprimer = html_a("Supprimer", PROJET_URL_SITE . "admin/projet_form/projet_form_delete.php?projetASupprimer=$result[id_projet]", "alert", "Effacer ce projet ?");
-                      echo "<li>$result[titre]  ( $lienModifier | $lienSupprimer)</li>";
-                      echo "<li>$result[texte]  ( $lienModifier | $lienSupprimer)</li>";
-                    }
+                       recupererListeProjets();
                     echo "</ul>";
                       ?>
 

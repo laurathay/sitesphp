@@ -16,24 +16,24 @@ if(!empty($_GET["projetAAfficher"])) {
 <?php
 show_error();
 show_success();
-?>
 
+
+global $bdd;
+$results = $bdd-> query("SELECT * FROM projet WHERE id_projet=". $_GET["projetAAfficher"])->fetch();
+
+var_dump($results);
+?>
 <div class="form">
   <form enctype="multipart/form-data" action="projet_form_rep.php" method="post">
     <input type="hidden" name="id_projet" value="<?php echoKey($projetAModifier, "id_projet", 0)  ?>">
     <!-- champ caché -->
     <div class="field">
-      Nom : <input name="nom" placeholder="Nom" type="text" value="<?php echoKey($projetAModifier, "nom")  ?>">
+      Nom : <input name="nom" placeholder="Nom" type="text" value="<?php echoKey($projetAModifier, "titre")  ?>">
     </div>
     <div class="field">
       Technologie : <input name="techno_id" placeholder="Technologie" type="text" value="<?php echoKey($projetAModifier, "techno_id")  ?>">
     </div>
-    <div class="field">
-      Client : <input name="client" placeholder="Client" type="text" value="<?php echoKey($projetAModifier, "client")?>">
-    </div>
-    <div class="field">
-      Lien : <input name="lien" placeholder="Lien" type="text"  value="<?php echoKey($projetAModifier, "lien")?>">
-    </div>
+    
     <div class="field">
       Description : <textarea name="description" placeholder="Description" type="text" cols="40" rows="5" value="<?php echoKey($projetAModifier, "texte")?>"></textarea>
     </div>
