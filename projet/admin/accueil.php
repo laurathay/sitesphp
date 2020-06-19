@@ -51,7 +51,6 @@ show_success();
                 				<ul class="menu">
                           <li><a href="<?php echo PROJET_URL_SITE ?>index.php">Voir le site</a></li> <br>
                           <li><a href="<?php echo PROJET_URL_SITE ?>admin/projet_form/projet_form.php"> Modifier Projet </a></li> <br>
-                          <li><a href="<?php echo PROJET_URL_SITE ?>admin/projet_form/projet_form_delete.php"> Supprimer </a></li> <br>
                           <li><a href="/projet/admin/deconnexion.php">Se déconnecter</a></li> <br>
                           <li><a href="<?php echo PROJET_URL_SITE ?>contact.php"> Contact </a></li> <br>
                 				</ul>
@@ -73,15 +72,7 @@ show_success();
                       </div>
 
                       <?php
-                    /*  try{
-                            $pdo = new PDO("projet");
-                        } catch(Exception $e){
-                            print_r($e);
-                        }
-                       $projets = recupererListeProjets();
-                        foreach ( $projets as $line) {
-                        echo "<u>" . $line['titre'] . "</u>";
-                      } */
+
                       echo "<ul>";
                        recupererListeProjets();
                     echo "</ul>";

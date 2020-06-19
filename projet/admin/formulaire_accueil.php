@@ -1,4 +1,10 @@
+<hr>
 
+<div class="image_admin">
+<?php echo html_image("images/vrac/accueil.jpg", "image");?>
+</div>
+
+<hr>
 
     <h1>Ajout de votre projet</h1>
 
@@ -28,18 +34,15 @@
 
 
             <textarea name="texteAccueil" rows="20" cols="75"><?php echo montrerValeur("TEXTE_ACCUEIL")?></textarea>
-
             <!--
             MAX_FILE_SIZE doit précéder le champ input de type file. Il dit la taille maximum du fichier que l'on peut envoyer
             Ce champ n'est pas obligatoire.
              -->
             <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
 
-            <div class="image_admin">
-            <?php echo html_image("images/vrac/accueil.jpg", "image");?>
-            </div>
 
-            Image de la page d'accueil : <input name="imageAccueil" type="file"  accept="image/jpeg" />
+<hr>
+            Image du projet : <input name="imageAccueil" type="file"  accept="image/jpeg" />
 
             <input type="submit" value="Envoyer" />
             <a href="<?php echo PROJET_URL_SITE ?>admin/accueil.php" class="button">Annuler</a>

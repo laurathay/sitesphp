@@ -245,7 +245,7 @@ box-shadow: -13px -9px 0px 1px #f6f9c2;
 	font-weight: 800;
 }
 .E img {
-	mix-blend-mode: overlay;
+	mix-blend-mode: initial;
 	grid-column: 3 / 5;
 	grid-row: 3 / 6;
 }
