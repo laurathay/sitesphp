@@ -123,7 +123,7 @@ function enregistrerFichier($fichier, $destination) {
         }
 }
 
-function recupererListeProjets() {
+function recupererListeProjets() { //que jutilise dans l'admin
 
   /*try{
         $pdo = new PDO("projet");
@@ -139,6 +139,24 @@ function recupererListeProjets() {
             $lienSupprimer = html_a("Supprimer", PROJET_URL_SITE . "admin/projet_form/projet_form_delete.php?projetASupprimer=$projet[id_projet]", "alert", "Effacer ce projet ?");
             echo "<li>$projet[titre]  ( $lienModifier | $lienSupprimer)</li>";
             echo "<li>$projet[texte]  ( $lienModifier | $lienSupprimer)</li>";
+
+        }
+}
+function recupererProjets() { //que jutiise sur le site normal 
+
+  /*try{
+        $pdo = new PDO("projet");
+    } catch(Exception $e){
+        print_r($e);
+    }*/
+
+        global $bdd;
+        $results = $bdd-> query("SELECT * FROM projet")->fetchAll();
+        foreach ($results as $key => $projet) {
+
+            echo "<li>$projet[titre]  </li>";
+            echo "<li>$projet[texte]  </li>";
+            echo "<li>$projet[image]  </li>";
 
         }
 }

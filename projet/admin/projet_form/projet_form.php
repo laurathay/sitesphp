@@ -35,7 +35,7 @@ var_dump($results);
     </div>
 
     <div class="field">
-      Description : <textarea name="texte" placeholder="Description" type="text" cols="50" rows="20" value="<?php echoKey($projetAModifier, "texte")?>"></textarea>
+      Description : <textarea name="texte" placeholder="Description" type="text" cols="50" rows="20"><?php echoKey($projetAModifier, "texte")?></textarea>
     </div>
 
     <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
