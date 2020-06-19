@@ -1,6 +1,6 @@
 
 
-    <h1>Modification de la page d'accueil</h1>
+    <h1>Ajout de votre projet</h1>
 
 
 
@@ -36,7 +36,7 @@
             <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
 
             <div class="image_admin">
-            <?php echo html_image("images/vrac/accueil.jpg", "mini_image");?>
+            <?php echo html_image("images/vrac/accueil.jpg", "image");?>
             </div>
 
             Image de la page d'accueil : <input name="imageAccueil" type="file"  accept="image/jpeg" />

@@ -14,7 +14,7 @@ if(!empty($_POST["titre"])) {
 }
 
 if(!empty($_FILES)) {
-    enregistrerFichier($_FILES["imageAccueil"],  "images/vrac/accueil.jpg");
+    enregistrerFichier($_FILES["imageAccueil"],  "images/vracs/0.jpg");
 }
 
 ajouterSuccess("Nous avons enregistré la page d'accueil");

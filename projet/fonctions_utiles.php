@@ -125,11 +125,11 @@ function enregistrerFichier($fichier, $destination) {
 
 function recupererListeProjets() {
 
-  try{
+  /*try{
         $pdo = new PDO("projet");
     } catch(Exception $e){
         print_r($e);
-    }
+    }*/
 
         global $bdd;
         $results = $bdd-> query("SELECT * FROM projet")->fetchAll();
@@ -181,7 +181,7 @@ function html_image($urlImage, $classHtml = "") {
         // on affiche le tag vers l'image seulement si l'image existe.
 
         if(is_file(PROJET_PATH_SITE .$urlImage)) {
-            return "<img src='".PROJET_URL_SITE."/$urlImage' class='$classHtml'>";
+            return "<img src='".PROJET_URL_SITE."$urlImage' class='$classHtml'>";
         }
         return "";
 }

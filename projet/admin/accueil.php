@@ -3,7 +3,7 @@
 
 include "../config.php";
 include "include/entete.php";
-include "../fonctions_utiles.php";
+/*include "../fonctions_utiles.php";*/
 
 
 proteger_page(); // fonction qui permet de verifier si nous nous sommes préalablement connecté.
@@ -73,12 +73,12 @@ show_success();
                       </div>
 
                       <?php
-                      try{
+                    /*  try{
                             $pdo = new PDO("projet");
                         } catch(Exception $e){
                             print_r($e);
                         }
-                    /*    $projets = recupererListeProjets();
+                       $projets = recupererListeProjets();
                         foreach ( $projets as $line) {
                         echo "<u>" . $line['titre'] . "</u>";
                       } */

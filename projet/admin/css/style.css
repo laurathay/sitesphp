@@ -565,7 +565,11 @@ a {
 }
 
 
-
+.image_admin{
+	display: inline-block;
+	width:50%;
+	margin : 5em 5em;
+}
 
 
 

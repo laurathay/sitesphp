@@ -33,13 +33,11 @@ var_dump($results);
     <div class="field">
       Technologie : <input name="techno_id" placeholder="Technologie" type="text" value="<?php echoKey($projetAModifier, "techno_id")  ?>">
     </div>
-    
+
     <div class="field">
-      Description : <textarea name="description" placeholder="Description" type="text" cols="40" rows="5" value="<?php echoKey($projetAModifier, "texte")?>"></textarea>
+      Description : <textarea name="description" placeholder="Description" type="text" cols="50" rows="20" value="<?php echoKey($projetAModifier, "texte")?>"></textarea>
     </div>
-    <div class="field">
-      Page : <input name="page" placeholder="Page" type="number" value="<?php echoKey($projetAModifier, "page")?>">
-    </div>
+
     <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
     <div class="image_admin">
     <?php
