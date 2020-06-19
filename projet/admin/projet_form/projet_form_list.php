@@ -26,9 +26,10 @@ show_success();
     } else {
         echo "<ul>";
       foreach($results as $result) {
-        $lienModifier = html_a("Modifier", PROJET_URL_SITE . "admin/projet/projet_form.php?projetAAfficher=$result[id_projet]");
-        $lienSupprimer = html_a("Supprimer", PROJET_URL_SITE . "admin/projet/projet_delete.php?projetASupprimer=$result[id_projet]", "alert", "Effacer ce projet ?");
-        echo "<li>$result[nom]  ( $lienModifier | $lienSupprimer)</li>";
+        $lienModifier = html_a("Modifier", PROJET_URL_SITE . "admin/projet_form/projet_form.php?projetAAfficher=$result[id_projet]");
+        $lienSupprimer = html_a("Supprimer", PROJET_URL_SITE . "admin/projet_form/projet_form_delete.php?projetASupprimer=$result[id_projet]", "alert", "Effacer ce projet ?");
+        echo "<li>$result[titre]  ( $lienModifier | $lienSupprimer)</li>";
+        echo "<li>$result[texte]  ( $lienModifier | $lienSupprimer)</li>";
       }
       echo "</ul>";
     }

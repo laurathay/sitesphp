@@ -130,14 +130,17 @@ function recupererListeProjets() {
     } catch(Exception $e){
         print_r($e);
     }
-    
+
         global $bdd;
         $sth = $bdd->prepare("SELECT titre, texteAccueil, date, imageAccueil FROM projet");
-        $sth->execute();
+        $sth->execute([
+              ":titre" => $_POST['TITRE_ACCUEIL'],
+              ":texte" =>  $_POST['texteAccueil'],
+            ]);
         /* Récupération de toutes les lignes d'un jeu de résultats */
         print("Récupération de tous les projets :\n");
         $result = $sth->fetchAll();
-        return $result;
+        echo $projets;
 }
 
 

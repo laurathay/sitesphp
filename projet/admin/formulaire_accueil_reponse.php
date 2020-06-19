@@ -9,11 +9,10 @@ proteger_page(); // on ne peut pas acceder à la page sans être connecté.
 if(!empty($_POST["titre"])) {
 
 
-  enregistreProjet($_POST['titre'],$_POST['texteAccueil']);
+  enregistreProjet($_POST['titre'],$_POST['texteAccueil'],$_POST['techAccueil']);
 
 }
 
-die();
 if(!empty($_FILES)) {
     enregistrerFichier($_FILES["imageAccueil"],  "images/vrac/accueil.jpg");
 }

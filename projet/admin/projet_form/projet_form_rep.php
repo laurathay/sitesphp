@@ -14,7 +14,7 @@ if(!empty($_POST)) {// si on a cliqué sur valider
       ":texte" =>  $_POST["texte"],
       ":page" =>  $_POST["page"],
     ]);
-    $chapterID = $bdd -> lastInsertId();
+    $projetID = $bdd -> lastInsertId();
     show_success("Le nouveau projet $projetID  a été ajouté.");
 } else {
     // MODIFIER CHAPITRE

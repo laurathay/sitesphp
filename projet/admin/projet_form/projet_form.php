@@ -35,7 +35,7 @@ show_success();
       Lien : <input name="lien" placeholder="Lien" type="text"  value="<?php echoKey($projetAModifier, "lien")?>">
     </div>
     <div class="field">
-      Description : <textarea name="texte" placeholder="Description" type="text" cols="40" rows="5" value="<?php echoKey($projetAModifier, "texte")?>"></textarea>
+      Description : <textarea name="description" placeholder="Description" type="text" cols="40" rows="5" value="<?php echoKey($projetAModifier, "texte")?>"></textarea>
     </div>
     <div class="field">
       Page : <input name="page" placeholder="Page" type="number" value="<?php echoKey($projetAModifier, "page")?>">
