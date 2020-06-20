@@ -151,6 +151,29 @@ function recupererTechno() { //que jutilise dans l'admin
         }
 }
 
+function recupTechno ($idTech, $techno) { //pour afficher la techno avec le bon projet mais in progress..
+     global $bdd;
+     $query2 = $bdd -> prepare("SELECT nom_techno
+       FROM projet, techno, projet_tech
+       WHERE projet.id_projet = projet_tech.projet_id
+       AND projet_tech.techno_id = techno.id_techno
+       AND projet.id_projet = :idProjet ");
+     $query2 -> execute([":idProjet" => $idTechno]);//
+     return $query2 -> fetchAll(PDO::FETCH_ASSOC); // on utilise fetch et non fetchAll car nous souhaitons retourner un seul résultat.
+
+     foreach ($results as $key => $techno) {
+
+         $lienSupprimer = html_a("Supprimer", PROJET_URL_SITE . "admin/projet_form/projet_form_delete.php?technoASupprimer=$techno[id_techno]", "alert", "Effacer ce langage ?");
+         echo "<div class=\"nom_techno\"><li> Langue : $techno[nom_techno] <br> ($lienSupprimer)</li></div>";
+
+// manque quelque chose pour l'afficher mais je n'arrive pas à mettre le doigt dessus 
+ }
+}
+/* $techno_a_afficher = recupTechno($idTech);*/
+
+
+
+
 function recupererListeProjets() { //que jutilise dans l'admin
 
 
@@ -178,8 +201,8 @@ function recupererProjets() { //que jutiise sur le site normal
         $results = $bdd-> query("SELECT * FROM projet")->fetchAll();
         foreach ($results as $key => $projet) {
 
-            echo "<div class=\"titre_projet\"><li> $projet[titre]  </li></div>";
-            echo "<div class=\"texte_projet\"><li> $projet[texte]  </li></div>";
+            echo "<div class=\"titre_projet\"><li> Projet : $projet[titre]  </li></div>";
+            echo "<div class=\"texte_projet\"><li> Description : $projet[texte]  </li></div>";
             echo html_image("images/vrac/" .  $projet['id_projet'] . ".jpg", "image_dimension");
             echo "<hr>";
         }

@@ -1,6 +1,9 @@
 <main>
 <hr>
+
               <aside>
+                <h1> Portfolio Times</h1>
+
                   <div>
                       <div class="issue">Issue #1 </div>
                       <div class="date"><?php echo date("F j, Y");?></div>
