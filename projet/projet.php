@@ -6,23 +6,20 @@ include "template/include/head.php";
 
 ?>
 <body>
+      <div class = "liste-projets">
         <h1> Liste des projets </h1>
 
-        <div class="nav_chapitres">
-
-          <h2>Les projets</h2>
-          <div class="chapter_list">
 
             <?php
-
+            echo "<div class=\"inline\">";
             echo "<ul>";
              recupererProjets();
-          echo "</ul>";
+             
+            echo "</ul>";
+            echo "</div>";
             ?>
 
-          </div>
-
-        </div>
+      </div>
 </body>
 
 <?php

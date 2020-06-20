@@ -82,6 +82,22 @@ function enregistreProjet($titre, $texte) {
           }
 }
 
+function enregistreTechno($techno) {
+    // permet d'enregistrer une donnée dans la table techno
+    global $bdd;
+        // nous n'avons pas d'enregistrement, nous devons l'insérer dans la base.
+        $date = '2020';
+        $query = $bdd -> prepare("INSERT into techno (nom_techno) VALUES ( :nom_techno )");
+        $stmt = $query -> execute([":nom_techno" => $nom_techno]);
+
+
+        if (!$stmt) {
+            echo "\nPDO::errorInfo():\n";
+            print_r($query->errorInfo());
+
+          }
+}
+
 function MontrerValeur($iduu) {
     // montre la valeur de simpledonnee
 
@@ -123,13 +139,20 @@ function enregistrerFichier($fichier, $destination) {
         }
 }
 
+function recupererTechno() { //que jutilise dans l'admin
+
+
+        global $bdd;
+        $results = $bdd-> query("SELECT * FROM techno")->fetchAll();
+        foreach ($results as $key => $techno) {
+
+            $lienSupprimer = html_a("Supprimer", PROJET_URL_SITE . "admin/projet_form/projet_form_delete.php?technoASupprimer=$techno[id_techno]", "alert", "Effacer ce langage ?");
+            echo "<div class=\"nom_techno\"><li> Langue : $techno[nom_techno] <br> ($lienSupprimer)</li></div>";
+        }
+}
+
 function recupererListeProjets() { //que jutilise dans l'admin
 
-  /*try{
-        $pdo = new PDO("projet");
-    } catch(Exception $e){
-        print_r($e);
-    }*/
 
         global $bdd;
         $results = $bdd-> query("SELECT * FROM projet")->fetchAll();
@@ -137,12 +160,13 @@ function recupererListeProjets() { //que jutilise dans l'admin
 
             $lienModifier = html_a("Modifier", PROJET_URL_SITE . "admin/projet_form/projet_form.php?projetAAfficher=$projet[id_projet]");
             $lienSupprimer = html_a("Supprimer", PROJET_URL_SITE . "admin/projet_form/projet_form_delete.php?projetASupprimer=$projet[id_projet]", "alert", "Effacer ce projet ?");
-            echo "<li>$projet[titre]  ( $lienModifier | $lienSupprimer)</li>";
-            echo "<li>$projet[texte]  ( $lienModifier | $lienSupprimer)</li>";
-
+            echo "<div class=\"titre_projet\"><li> Projet : $projet[titre] <br> ( $lienModifier | $lienSupprimer)</li></div>";
+            echo "<div class=\"texte_projet\"><li> Description: $projet[texte] <br> ( $lienModifier | $lienSupprimer)</li></div>";
+            echo html_image("images/vrac/" .  $projet['id_projet'] . ".jpg", "image_dimension");
+            echo "<hr>";
         }
 }
-function recupererProjets() { //que jutiise sur le site normal 
+function recupererProjets() { //que jutiise sur le site normal
 
   /*try{
         $pdo = new PDO("projet");
@@ -154,10 +178,10 @@ function recupererProjets() { //que jutiise sur le site normal
         $results = $bdd-> query("SELECT * FROM projet")->fetchAll();
         foreach ($results as $key => $projet) {
 
-            echo "<li>$projet[titre]  </li>";
-            echo "<li>$projet[texte]  </li>";
-            echo "<li>$projet[image]  </li>";
-
+            echo "<div class=\"titre_projet\"><li> $projet[titre]  </li></div>";
+            echo "<div class=\"texte_projet\"><li> $projet[texte]  </li></div>";
+            echo html_image("images/vrac/" .  $projet['id_projet'] . ".jpg", "image_dimension");
+            echo "<hr>";
         }
 }
 

@@ -18,4 +18,5 @@ define("PROJET_PATH_SITE", __DIR__ . "/"); //definit au cas ou si on rappelle pl
 define("URL_TEMPLATE", PROJET_URL_SITE . "template/css/"); //le chemin pour le css template 2020
 define("PATH_TEMPLATE", PROJET_PATH_SITE . "template/accueil.php"); //definit au cas ou on en a besoin
 
-define("NOM_DU_PROJET", "Projet");
+define("NOM_DU_PROJET", "Projet THAYTHAY");
+define("TITLE", "Projet PHP portoflio THAYTHAY");

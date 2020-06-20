@@ -9,8 +9,11 @@ proteger_page(); // on ne peut pas acceder à la page sans être connecté.
 if(!empty($_POST["titre"])) {
 
 
-  enregistreProjet($_POST['titre'],$_POST['texteAccueil'],$_POST['techAccueil']);
+  enregistreProjet($_POST['titre'],$_POST['texteAccueil']);
+}
 
+if(!empty($_POST["techno"])) {
+  enregistreTechno($_POST['techno']);
 }
 
 if(!empty($_FILES)) {

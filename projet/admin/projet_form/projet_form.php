@@ -4,6 +4,7 @@ include "../include/entete.php";
 include "../accueil.php";
 
 proteger_page();
+
 if(!empty($_GET["projetAAfficher"])) {
     $projetAModifier = $bdd -> query("SELECT * from projet where id_projet = " . $_GET["projetAAfficher"]) -> fetch();
 } else {
@@ -18,10 +19,10 @@ show_error();
 show_success();
 
 
-global $bdd;
-$results = $bdd-> query("SELECT * FROM projet WHERE id_projet=". $_GET["projetAAfficher"])->fetch();
+/*global $bdd;
+$results = $bdd-> query("SELECT * FROM projet WHERE id_projet=". $_GET["projetAAfficher"])->fetch();*/
 
-var_dump($results);
+/*var_dump($results);*/
 ?>
 <div class="form">
   <form enctype="multipart/form-data" action="projet_form_rep.php" method="post">

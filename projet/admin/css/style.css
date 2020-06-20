@@ -18,6 +18,8 @@ h1 {
 }
 
 
+
+
 /*  Version A — Let's break apart the letters
 ------------------------------------------------------- */
 .A h1 {
@@ -571,10 +573,28 @@ a {
 	margin : 5em 5em;
 }
 
+/* ---- affichage projets --- */
 
 
+.inline .titre_projet, .texte_projet, .image_dimension {
+  display : inline-block;
+}
+.titre_projet{
+  margin: 2em 3em;
+  list-style: none;
+}
 
-
+.texte_projet{
+	margin: 2em 10em;
+  width:50%;
+  list-style: none;
+  text-align: justify;
+}
+.image_dimension{
+  filter:none;
+  margin: 2em 10em;
+  width: 70%;
+}
 
 
 

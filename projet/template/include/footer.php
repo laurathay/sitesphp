@@ -10,7 +10,7 @@
       </div>
 
       <div class="project">
-        <a href="project.php"> Projects</a>
+        <a href="<?php echo PROJET_URL_SITE ?>projet.php"> Projects</a>
       </div>
 
       <div class="section">
@@ -18,7 +18,7 @@
       </div>
 
       <div class="project">
-        <a href="contact.php"> Contact </a>
+        <a href="<?php echo PROJET_URL_SITE ?>contact.php"> Contact </a>
       </div>
 
       <div class="bas">
@@ -38,8 +38,8 @@
   <hr>
 
 
-  &copy; <?php echo ('NOM_DU_PROJET') ?>
-    2014 - <?php echo date("Y") ?>
+  &copy; <?php echo NOM_DU_PROJET ?>
+     - <?php echo date("Y") ?>
 </footer>
 
 </body>

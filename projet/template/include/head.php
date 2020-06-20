@@ -14,7 +14,7 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <title> Projects PHP Portfolio </title>
+    <title> <?php echo TITLE ?> </title>
     <link rel="stylesheet" href="template/css/style.css">
 
   </head>

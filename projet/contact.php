@@ -5,6 +5,8 @@ include "config.php";
 include "template/include/head.php";
 
 ?>
+
+<hr>
 <div class="cards">
 
 	<div class="contact">Contact Me</div>
@@ -19,7 +21,6 @@ include "template/include/head.php";
 			<div class="control submit"><input type="submit" /></div>
 		</form>
 	</div>
-	<a href="#"><i class="fas fa-phone-alt"></i></a>
 
 	 <div class="card active" id="overview">
 		<a class="card-toggle"><i class="fa fa-arrow-circle-left"></i></a>

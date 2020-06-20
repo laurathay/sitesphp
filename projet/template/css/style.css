@@ -14,7 +14,7 @@
 /* All Grid Items */
 .container-studio > * {
   background-color: #ffddd2;
-  font-size: 80px;
+  font-size: 25px;
   padding: 10px;
 }
 .about {
@@ -28,6 +28,7 @@
 
 .section {
   grid-area: section;
+  font-size: 1.5em;
 }
 
 .project:nth-of-type(2) {
@@ -95,6 +96,10 @@ h1 {
   }
 }
 
+.liste-projets h1{
+	margin: 2em;
+}
+
 h3 {
   font: italic 20px var(--font-title);
   margin-bottom: 1rem;
@@ -110,6 +115,7 @@ h5 {
 }
 
 p {
+  font-family: "Playfair Display SC";
   line-height: 1.3;
 }
 p a {
@@ -646,6 +652,32 @@ aside > div > div {
 }
 
 /*--------------------------------------*/
+/*----------- partie liste projets --------------*/
+/*--------------------------------------*/
+.inline .titre_projet, .texte_projet, .image_dimension {
+  display : inline-block;
+}
+.titre_projet{
+  margin: 2em 2em;
+  list-style: none;
+}
+
+.texte_projet{
+  width:50%;
+  list-style: none;
+  text-align: justify;
+  margin: 2em 10em;
+
+}
+.image_dimension{
+  filter:none;
+  margin: 2em 10em;
+  width: 70%;
+}
+
+
+
+/*--------------------------------------*/
 /*----------- partie contact --------------*/
 /*--------------------------------------*/
 
@@ -900,4 +932,9 @@ form input[type=submit] {
 
 footer a{
   font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+}
+
+footer .emoticones{
+  text-align: end;
 }

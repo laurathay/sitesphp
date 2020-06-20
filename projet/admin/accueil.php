@@ -72,10 +72,11 @@ show_success();
                       </div>
 
                       <?php
-
-                      echo "<ul>";
-                       recupererListeProjets();
-                    echo "</ul>";
+                        echo "<div class=\"inline\">";
+                          echo "<ul>";
+                              recupererListeProjets();
+                          echo "</ul>";
+                        echo "</div>;";
                       ?>
 
 <?php

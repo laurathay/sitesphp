@@ -1,10 +1,6 @@
-<hr>
 
-<div class="image_admin">
-<?php echo html_image("images/vrac/accueil.jpg", "image");?>
-</div>
 
-<hr>
+
 
     <h1>Ajout de votre projet</h1>
 
@@ -22,12 +18,12 @@
             <div class="selectdiv">
               <label>
                   <select>
-                      <option name="techAccueil" selected> Select Tech </option>
-                      <option name="techAccueil"> HTML/CSS </option>
-                      <option name="techAccueil"> JavaScript </option>
-                      <option name="techAccueil"> PHP </option>
-                      <option name="techAccueil"> Wordpress </option>
-                      <option name="techAccueil"> Node.JS </option>
+                      <option name="techno" value="<?php echo montrerValeur("TECHNO")?>"selected> Select Tech </option>
+                      <option name="techno"> HTML/CSS </option>
+                      <option name="techno"> JavaScript </option>
+                      <option name="techno"> PHP </option>
+                      <option name="techno"> Wordpress </option>
+                      <option name="techno"> Node.JS </option>
                   </select>
               </label>
             </div>
