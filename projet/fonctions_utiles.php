@@ -37,7 +37,6 @@ function proteger_page() {
         // fonction qui permet de vérifier que la variable $_SESSION["connected_user"] existe
         // si c'est le cas, nous sommes connecté sinon, on retourne à l'accueil
         // et on ajoute un message d'erreur.
-        var_dump($_SESSION);
         if(empty($_SESSION["peut_se_connecter"])) {
             // je ne suis pas connecté.
             changeDePage(PROJET_URL_SITE . "admin/connexion.php");
@@ -151,24 +150,22 @@ function recupererTechno() { //que jutilise dans l'admin
         }
 }
 
-function recupTechno ($idTech, $techno) { //pour afficher la techno avec le bon projet mais in progress..
-     global $bdd;
+function recupTechno ($id_projet) { //pour afficher la techno avec le bon projet mais in progress..
+     global $bdd; //ne marche pas, j'abandonne ...
      $query2 = $bdd -> prepare("SELECT nom_techno
-       FROM projet, techno, projet_tech
-       WHERE projet.id_projet = projet_tech.projet_id
-       AND projet_tech.techno_id = techno.id_techno
-       AND projet.id_projet = :idProjet ");
-     $query2 -> execute([":idProjet" => $idTechno]);//
-     return $query2 -> fetchAll(PDO::FETCH_ASSOC); // on utilise fetch et non fetchAll car nous souhaitons retourner un seul résultat.
-
-     foreach ($results as $key => $techno) {
+       FROM techno
+       INNER JOIN projet_tech
+       ON techno.id_techno=projet_tech.techno_id
+      WHERE projet_id=? ");
+     $query2 -> execute(["$id_projet"]);//
+     $results = $query2 -> fetchAll(PDO::FETCH_ASSOC); // on utilise fetch et non fetchAll car nous souhaitons retourner un seul résultat.
 
          $lienSupprimer = html_a("Supprimer", PROJET_URL_SITE . "admin/projet_form/projet_form_delete.php?technoASupprimer=$techno[id_techno]", "alert", "Effacer ce langage ?");
          echo "<div class=\"nom_techno\"><li> Langue : $techno[nom_techno] <br> ($lienSupprimer)</li></div>";
 
-// manque quelque chose pour l'afficher mais je n'arrive pas à mettre le doigt dessus 
+// manque quelque chose pour l'afficher mais je n'arrive pas à mettre le doigt dessus
  }
-}
+
 /* $techno_a_afficher = recupTechno($idTech);*/
 
 
