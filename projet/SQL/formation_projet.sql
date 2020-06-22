@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jun 20, 2020 at 04:21 PM
+-- Generation Time: Jun 22, 2020 at 08:03 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.2
 
@@ -110,6 +110,13 @@ ALTER TABLE `projet`
   ADD PRIMARY KEY (`id_projet`);
 
 --
+-- Indexes for table `projet_tech`
+--
+ALTER TABLE `projet_tech`
+  ADD KEY `projet_id` (`projet_id`),
+  ADD KEY `techno_id` (`techno_id`);
+
+--
 -- Indexes for table `techno`
 --
 ALTER TABLE `techno`
@@ -142,3 +149,14 @@ ALTER TABLE `techno`
 --
 ALTER TABLE `user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `projet_tech`
+--
+ALTER TABLE `projet_tech`
+  ADD CONSTRAINT `projet_tech_ibfk_1` FOREIGN KEY (`projet_id`) REFERENCES `projet` (`id_projet`),
+  ADD CONSTRAINT `projet_tech_ibfk_2` FOREIGN KEY (`techno_id`) REFERENCES `techno` (`id_techno`);
